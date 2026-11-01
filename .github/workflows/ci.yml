@@ -26,6 +26,13 @@ jobs:
       - name: Type check
         working-directory: backend
         run: .venv/bin/mypy src
+      - name: Install fonts for the dataset generator
+        run: sudo apt-get update && sudo apt-get install -y fonts-dejavu-core
+      - name: Regenerate eval dataset
+        # The 773 generated files are not committed (33 MB); dataset v1
+        # regenerates byte-identically from seed 42, and the runner tests
+        # read it.
+        run: backend/.venv/bin/python evals/generate.py
       - name: Test
         working-directory: backend
         run: .venv/bin/pytest -q
@@ -90,13 +97,21 @@ jobs:
 
   storage-live:
     runs-on: ubuntu-latest
-    services:
-      azurite:
-        image: mcr.microsoft.com/azure-storage/azurite
-        ports:
-          - 10000:10000
     steps:
       - uses: actions/checkout@v4
+      - name: Start Azurite
+        # Started as a step rather than a service container so it can take
+        # --skipApiVersionCheck: the azure-storage-blob SDK can be newer than
+        # the API version the emulator accepts.
+        run: |
+          docker run -d --name azurite -p 10000:10000 \
+            mcr.microsoft.com/azure-storage/azurite \
+            azurite-blob --blobHost 0.0.0.0 --blobPort 10000 --skipApiVersionCheck --loose
+          for i in $(seq 1 30); do
+            if curl -s -o /dev/null http://localhost:10000/; then echo "Azurite is up"; exit 0; fi
+            sleep 1
+          done
+          echo "Azurite did not start"; docker logs azurite; exit 1
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
