@@ -1,0 +1,43 @@
+# Local services: docker compose up --build
+#   web on :5173 (nginx serving the built frontend), api on :8000.
+# The browser calls the api at localhost:8000, which is also the
+# backend's default CORS origin, so no CORS override is needed.
+# LLM_PROVIDER defaults to mock; set it (and the provider key) to run
+# a real provider. For blob storage instead of local disk, set
+# STORAGE_BACKEND=azure_blob and AZURE_STORAGE_CONNECTION_STRING;
+# from inside the api container the azurite host is "azurite"
+# (BlobEndpoint http://azurite:10000/devstoreaccount1).
+services:
+  api:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - LLM_PROVIDER=${LLM_PROVIDER:-mock}
+      - DATABASE_URL=sqlite:///./data/claims.db
+      - UPLOAD_DIR=uploads
+    volumes:
+      - api-data:/app/data
+      - api-uploads:/app/uploads
+
+  web:
+    build:
+      context: ./frontend
+      args:
+        - VITE_API_URL=${VITE_API_URL:-http://localhost:8000}
+    ports:
+      - "5173:80"
+    depends_on:
+      - api
+
+  azurite:
+    image: mcr.microsoft.com/azure-storage/azurite
+    ports:
+      - "10000:10000"
+    volumes:
+      - azurite-data:/data
+
+volumes:
+  api-data:
+  api-uploads:
+  azurite-data:
