@@ -1,0 +1,82 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "insurance-claims-copilot"
+version = "0.1.0"
+description = "Insurance claims intake copilot: multimodal extraction and agentic triage with human review."
+requires-python = "==3.12.*"
+dependencies = [
+    "anthropic",
+    "azure-storage-blob",
+    "fastapi",
+    "google-genai",
+    "httpx",
+    "langgraph",
+    "openai",
+    "pillow",
+    "pydantic>=2.7",
+    "pypdf",
+    "pypdfium2",
+    "pydantic-settings>=2.0",
+    "python-multipart",
+    "pyyaml>=6.0",
+    "sqlmodel>=0.0.18",
+    "tenacity>=8.0",
+    "uvicorn",
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy",
+    "pytest",
+    "pytest-asyncio",
+    "reportlab",
+    "ruff",
+    "types-PyYAML",
+]
+postgres = [
+    "psycopg[binary]",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+claims_copilot = ["pricing.yaml", "recorded_data.json", "py.typed"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+# First-party code lives in src/. src alone is resolved relative to the
+# working directory, so runs from the repo root (CI's evals lint) still
+# classified claims_copilot as third-party; known-first-party is
+# directory-independent and keeps both invocations consistent.
+src = ["src"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["claims_copilot"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "W"]
+
+[tool.ruff.lint.per-file-ignores]
+# Prompt text is content sent to the model, not code; wrapping its lines
+# would hurt readability for no benefit.
+"src/claims_copilot/providers/llm.py" = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+disallow_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = "reportlab.*"
+ignore_missing_imports = true

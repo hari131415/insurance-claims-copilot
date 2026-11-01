@@ -1,0 +1,50 @@
+# Secrets and local environment
+.env
+azure-functions/local.settings.json
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Databases and uploads (local dev only; production uses Postgres and Blob Storage)
+*.db
+*.db-journal
+uploads/
+
+# Generated eval data (33 MB, 773 files). The labels file is the
+# exception: it is committed because it records what each claim
+# should contain, while the files themselves are reproducible from
+# seed 42 (evals/generate.py, byte-identical regeneration verified).
+evals/data/*
+!evals/data/labels.json
+
+# Intermediate refresh outputs; the merged anthropic_test_raw.json supersedes them
+evals/results/test_full/
+evals/results/anthropic_test_refresh.json
+evals/results/anthropic_test_refresh2.json
+
+# Node and frontend build output
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
