@@ -1,5 +1,14 @@
 # Insurance Claims Intake Copilot
 
+[![CI](https://github.com/hari131415/insurance-claims-copilot/actions/workflows/ci.yml/badge.svg)](https://github.com/hari131415/insurance-claims-copilot/actions/workflows/ci.yml)
+
+**At a glance** (evaluated live on Claude, 300 synthetic claims):
+97% field accuracy, 100% document classification, about $0.02 per
+claim. On a 200-claim held-out test split, prompt and confidence-gate
+fixes cut consistency false alarms from 58% to 49% and wrong
+coverage-review routings from 2 to 0. Details and caveats in
+[Results](#results) and [Limitations](#limitations-and-next-steps).
+
 Claim intake, first pass only. An adjuster uploads claim documents
 (forms, estimates, police reports, damage photos); the app extracts
 eight fields with confidence scores and source files, runs a
@@ -20,14 +29,17 @@ run with no API keys.
 ## Run it locally
 
 ```sh
-# Backend (from backend/): install once, then serve on :8000
-pip install -e ".[dev]"
+# Backend (from backend/): create a virtualenv, install, serve on :8000
+python -m venv .venv
+.venv/bin/pip install -e ".[dev]"
 .venv/bin/uvicorn claims_copilot.main:create_app --factory --port 8000
 
 # Frontend (from frontend/): serves on :5173, talks to :8000
 npm install
 npm run dev
 ```
+
+On Windows, use `.venv\Scripts\` in place of `.venv/bin/`.
 
 The mock provider is the default, so local runs need no keys. For a
 real provider, set `LLM_PROVIDER` and the provider's key and model
@@ -59,11 +71,11 @@ claims and saved Claude outputs.
 
 ![A photo mismatch: the form describes windstorm roof damage, the photo shows a flooded sedan. The consistency judge flags it, route Needs more info.](docs/screenshots/needs-more-info-mismatch.png)
 
-![A coverage-review claim: $350.18 against a $1,000 deductible, so no payout would be due.](docs/screenshots/coverage-review.png)
+![A coverage-review claim: a vehicle break-in under a policy that excludes theft, routed to the coverage-review queue for an adjuster to confirm.](docs/screenshots/coverage-review.png)
 
 ![Document preview with a scanned page: clicking a field's source file opens the document beside the fields.](docs/screenshots/document-preview-scanned.png)
 
-![An adjuster edit: the amount changed to $100,000, recorded as an override with the model value kept for comparison.](docs/screenshots/adjuster-edit.png)
+![An adjuster edit: the estimated damage corrected from $48,175.17 to $59,070.14 to match the repair estimate, stored as an override with the model value kept for comparison.](docs/screenshots/adjuster-edit.png)
 
 ![The stale-triage banner: fields changed since triage ran, with a re-run button.](docs/screenshots/stale-triage-banner.png)
 
@@ -213,8 +225,10 @@ GitHub Actions (`.github/workflows/ci.yml`) runs four jobs:
 backend (ruff, mypy, pytest, plus evals lint and type check),
 frontend (eslint, tsc, build), Playwright end-to-end tests
 against the real stack with the mock provider and the recorded
-provider, and the Azure Blob round-trip test against an Azurite
-service container.
+provider, and the Azure Blob round-trip test against the Azurite
+storage emulator (started in the job with its API version check
+skipped). The backend job regenerates the eval dataset first, since
+the generated files are not committed.
 
 For containers: `docker compose up --build` serves the api on
 :8000 and the web frontend on :5173 (Azurite included for
