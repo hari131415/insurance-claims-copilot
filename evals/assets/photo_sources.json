@@ -1,0 +1,195 @@
+[
+  {
+    "title": "File:Car crash 1 (cropped).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Car_crash_1_(cropped).jpg",
+    "author": "<a href=\"//commons.wikimedia.org/wiki/User:Thue\" title=\"User:Thue\">Thue</a>",
+    "license": "Public domain",
+    "loss_types": [
+      "auto"
+    ],
+    "file": "pool_02.jpg",
+    "width": 640,
+    "height": 640
+  },
+  {
+    "title": "File:Car crash 2.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Car_crash_2.jpg",
+    "author": "",
+    "license": "Public domain",
+    "loss_types": [
+      "auto"
+    ],
+    "file": "pool_04.jpg",
+    "width": 640,
+    "height": 480
+  },
+  {
+    "title": "File:Damaged car door.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Damaged_car_door.jpg",
+    "author": "<a href=\"//commons.wikimedia.org/wiki/User:Garitzko\" title=\"User:Garitzko\">Garitzko</a>",
+    "license": "Public domain",
+    "loss_types": [
+      "auto",
+      "theft"
+    ],
+    "file": "pool_06.jpg",
+    "width": 640,
+    "height": 480
+  },
+  {
+    "title": "File:FEMA - 38606 - Cars scattered due to Hurricane Ike.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:FEMA_-_38606_-_Cars_scattered_due_to_Hurricane_Ike.jpg",
+    "author": "Jocelyn Augustino",
+    "license": "Public domain",
+    "loss_types": [
+      "auto"
+    ],
+    "file": "pool_48.jpg",
+    "width": 640,
+    "height": 424
+  },
+  {
+    "title": "File:FEMA - 38615 - A car rests against a utillity pole on Bolivar Peninsula.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:FEMA_-_38615_-_A_car_rests_against_a_utillity_pole_on_Bolivar_Peninsula.jpg",
+    "author": "Jocelyn Augustino",
+    "license": "Public domain",
+    "loss_types": [
+      "auto"
+    ],
+    "file": "pool_50.jpg",
+    "width": 640,
+    "height": 424
+  },
+  {
+    "title": "File:FEMA - 38927 - Cars at Cruise ship parking lot damaged by Hurricane Ike.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:FEMA_-_38927_-_Cars_at_Cruise_ship_parking_lot_damaged_by_Hurricane_Ike.jpg",
+    "author": "Jocelyn Augustino",
+    "license": "Public domain",
+    "loss_types": [
+      "auto"
+    ],
+    "file": "pool_53.jpg",
+    "width": 640,
+    "height": 426
+  },
+  {
+    "title": "File:FEMA - DSC9100 - Car mixed in with hurricane debris in the Lower Matecumbe Key community of Monroe county, Florida.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:FEMA_-_DSC9100_-_Car_mixed_in_with_hurricane_debris_in_the_Lower_Matecumbe_Key_community_of_Monroe_county,_Florida.jpg",
+    "author": "J.T. Blatty",
+    "license": "Public domain",
+    "loss_types": [
+      "auto"
+    ],
+    "file": "pool_78.jpg",
+    "width": 640,
+    "height": 426
+  },
+  {
+    "title": "File:FEMA - 37218 - Resident pushing a car through flood waters in Texas.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:FEMA_-_37218_-_Resident_pushing_a_car_through_flood_waters_in_Texas.jpg",
+    "author": "Jacinta Quesada",
+    "license": "Public domain",
+    "loss_types": [
+      "water damage"
+    ],
+    "file": "pool_37.jpg",
+    "width": 640,
+    "height": 426
+  },
+  {
+    "title": "File:FEMA - 44623 - Flood Damage Assessment team in Oklahoma.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:FEMA_-_44623_-_Flood_Damage_Assessment_team_in_Oklahoma.jpg",
+    "author": "Patsy Lynch",
+    "license": "Public domain",
+    "loss_types": [
+      "water damage"
+    ],
+    "file": "pool_73.jpg",
+    "width": 640,
+    "height": 536
+  },
+  {
+    "title": "File:FEMA - 44627 - Flood Damage and repair in Oklahoma.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:FEMA_-_44627_-_Flood_Damage_and_repair_in_Oklahoma.jpg",
+    "author": "Patsy Lynch",
+    "license": "Public domain",
+    "loss_types": [
+      "water damage"
+    ],
+    "file": "pool_74.jpg",
+    "width": 640,
+    "height": 425
+  },
+  {
+    "title": "File:FEMA - 44923 - Damaged wheelchair in a flood damaged home in Illinois.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:FEMA_-_44923_-_Damaged_wheelchair_in_a_flood_damaged_home_in_Illinois.jpg",
+    "author": "Patsy Lynch",
+    "license": "Public domain",
+    "loss_types": [
+      "water damage"
+    ],
+    "file": "pool_76.jpg",
+    "width": 640,
+    "height": 419
+  },
+  {
+    "title": "File:FEMA - DR4337 Water engulfs yards at Deltona, Florida, home in Volusia.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:FEMA_-_DR4337_Water_engulfs_yards_at_Deltona,_Florida,_home_in_Volusia.jpg",
+    "author": "Patsy Lynch/FEMA",
+    "license": "Public domain",
+    "loss_types": [
+      "water damage"
+    ],
+    "file": "pool_77.jpg",
+    "width": 640,
+    "height": 426
+  },
+  {
+    "title": "File:FEMA - 43899 - Tornado Damaged Home in Mississippi.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:FEMA_-_43899_-_Tornado_Damaged_Home_in_Mississippi.jpg",
+    "author": "George Armstrong",
+    "license": "Public domain",
+    "loss_types": [
+      "property"
+    ],
+    "file": "pool_61.jpg",
+    "width": 640,
+    "height": 963
+  },
+  {
+    "title": "File:FEMA - 44275 - Tornado Damage in Oklahoma.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:FEMA_-_44275_-_Tornado_Damage_in_Oklahoma.jpg",
+    "author": "Win Henderson",
+    "license": "Public domain",
+    "loss_types": [
+      "property"
+    ],
+    "file": "pool_63.jpg",
+    "width": 640,
+    "height": 426
+  },
+  {
+    "title": "File:FEMA - 44799 - Damaged residence in Minnesota.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:FEMA_-_44799_-_Damaged_residence_in_Minnesota.jpg",
+    "author": "Michael Mancino",
+    "license": "Public domain",
+    "loss_types": [
+      "property"
+    ],
+    "file": "pool_75.jpg",
+    "width": 640,
+    "height": 425
+  },
+  {
+    "title": "File:House damaged by Hurricane Dennis.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:House_damaged_by_Hurricane_Dennis.jpg",
+    "author": "<p>FMEA\n</p>\nOriginal uploader was <a href=\"https://en.wikipedia.org/wiki/User:Juliancolton\" class=\"extiw\" title=\"en:User:Juliancolton\">Juliancolton</a> at the <a href=\"https://en.wikipedia.org/wiki/\" class=\"extiw\" title=\"en:\">English Wikipedia</a>",
+    "license": "Public domain",
+    "loss_types": [
+      "property"
+    ],
+    "file": "pool_80.jpg",
+    "width": 640,
+    "height": 425
+  }
+]

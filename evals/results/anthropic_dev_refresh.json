@@ -1,0 +1,3682 @@
+{
+  "actual_cost_usd": 0.2818,
+  "budget_usd": 0.87,
+  "claims": [
+    {
+      "claim_id": "claim-0287",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_bf57d43a.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "repair_estimate",
+          "filename": "doc_4b2302da.pdf",
+          "predicted": "repair_estimate"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_d53b8ef7.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": true,
+      "consistency_notes": "Two contradictions. (1) Amount: the claim form states an estimated loss of $16,018.76 (matching the extracted value), but the repair estimate states a total of $20,847.41. The line items (7,057.55 + 7,386.26 + 3,123.47 + 3,280.13) do sum to $20,847.41, so the discrepancy is about $4,828.65. (2) Incident: the claim form and description say a burst pipe in an upstairs bathroom flooded two rooms of a 2-bedroom apartment, but the photo shows a silver sedan partially submerged in floodwater outdoors with a person standing at the open door. That is vehicle flood damage, not interior property water damage from a burst pipe. The amount and the incident identity both affect coverage and payout, so this needs review.",
+      "consistency_severity": "major",
+      "consistency_skipped": false,
+      "cost_usd": 0.00692,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Aisha Smith",
+          "predicted": "Aisha Smith"
+        },
+        "date_of_loss": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "2026-05-22",
+          "predicted": "2026-05-22"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.8,
+          "correct": true,
+          "expected": 16018.76,
+          "predicted": 16018.76
+        },
+        "incident_description": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Burst pipe in the upstairs bathroom flooded two rooms below.",
+          "predicted": "Burst pipe in the upstairs bathroom flooded two rooms below."
+        },
+        "incident_location": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "7912 Maple Dr, Cherry Hill, NJ",
+          "predicted": "7912 Maple Dr, Cherry Hill, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "water damage",
+          "predicted": "water damage"
+        },
+        "policy_number": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "POL-100008",
+          "predicted": "POL-100008"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "2-bedroom apartment",
+          "predicted": "2-bedroom apartment"
+        }
+      },
+      "latency_extract_s": 4.111,
+      "latency_total_s": 7.223,
+      "latency_triage_s": 3.062,
+      "loss_type": "water damage",
+      "messy": true,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Consistency check flagged a problem: Two contradictions. (1) Amount: the claim form states an estimated loss of $16,018.76 (matching the extracted value), but the repair estimate states a total of $20,847.41. The line items (7,057.55 + 7,386.26 + 3,123.47 + 3,280.13) do sum to $20,847.41, so the discrepancy is about $4,828.65. (2) Incident: the claim form and description say a burst pipe in an upstairs bathroom flooded two rooms of a 2-bedroom apartment, but the photo shows a silver sedan partially submerged in floodwater outdoors with a person standing at the open door. That is vehicle flood damage, not interior property water damage from a burst pipe. The amount and the incident identity both affect coverage and payout, so this needs review."
+      ],
+      "route_correct": true,
+      "route_expected": "needs_more_info",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0024",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_91ba0b1d.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_3b5f5a71.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form (doc_91ba0b1d.pdf) and the extracted data agree on every field: policy POL-100009, insured Robert Rivera, loss date August 8, 2025, loss type property, a fallen tree branch breaking two windows and damaging the siding of a 4-bedroom colonial house, and $5,189.19. The photo (doc_3b5f5a71.jpg) contradicts the described incident. It shows wrecked vehicle wreckage (a wheel and tire and a twisted white car body frame) on a seaweed-covered beach beside the water. It shows no house, broken windows, siding, or tree branch. The description says a tree branch damaged a house; the photo shows vehicle debris on a shoreline. This changes the identity of the incident and the loss type, so it should go to review.",
+      "consistency_severity": "major",
+      "consistency_skipped": false,
+      "cost_usd": 0.006674,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Robert Rivera",
+          "predicted": "Robert Rivera"
+        },
+        "date_of_loss": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "2025-08-08",
+          "predicted": "2025-08-08"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": 5189.19,
+          "predicted": 5189.19
+        },
+        "incident_description": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "A fallen tree branch broke two windows and damaged the siding.",
+          "predicted": "A fallen tree branch broke two windows and damaged the siding."
+        },
+        "incident_location": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "6883 River Rd, Jersey City, NJ",
+          "predicted": "6883 River Rd, Jersey City, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "property",
+          "predicted": "property"
+        },
+        "policy_number": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "POL-100009",
+          "predicted": "POL-100009"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "4-bedroom colonial house",
+          "predicted": "4-bedroom colonial house"
+        }
+      },
+      "latency_extract_s": 6.081,
+      "latency_total_s": 12.467,
+      "latency_triage_s": 6.352,
+      "loss_type": "property",
+      "messy": false,
+      "mismatch_detected": true,
+      "reasons_predicted": [
+        "Consistency check flagged a problem: The claim form (doc_91ba0b1d.pdf) and the extracted data agree on every field: policy POL-100009, insured Robert Rivera, loss date August 8, 2025, loss type property, a fallen tree branch breaking two windows and damaging the siding of a 4-bedroom colonial house, and $5,189.19. The photo (doc_3b5f5a71.jpg) contradicts the described incident. It shows wrecked vehicle wreckage (a wheel and tire and a twisted white car body frame) on a seaweed-covered beach beside the water. It shows no house, broken windows, siding, or tree branch. The description says a tree branch damaged a house; the photo shows vehicle debris on a shoreline. This changes the identity of the incident and the loss type, so it should go to review."
+      ],
+      "route_correct": true,
+      "route_expected": "needs_more_info",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0069",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_312347a1.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_36e0ae67.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form (doc_312347a1.pdf) describes a hailstorm that dented the roof and cracked a skylight, with loss type 'property' and $32,607.97 in damage. The photo (doc_36e0ae67.jpg) shows a large curbside pile of torn-out carpet, drywall and other interior debris in front of the house. That looks like interior gutting after flooding or water damage, not hail. The roof in the photo shows no visible dents, and no cracked skylight is visible. The form's other details (policy number, claimant, address, date of loss, amount) match the extracted data. The photo contradicts the described incident, so the loss type and cause are in question and the claim should be reviewed.",
+      "consistency_severity": "major",
+      "consistency_skipped": false,
+      "cost_usd": 0.010266,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Li Thomas",
+          "predicted": "Li Thomas"
+        },
+        "date_of_loss": {
+          "confidence": 0.3,
+          "correct": true,
+          "expected": "2027-03-15",
+          "predicted": "2027-03-15"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": 32607.97,
+          "predicted": 32607.97
+        },
+        "incident_description": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "Hailstorm dented the roof and cracked a skylight.",
+          "predicted": "Hailstorm dented the roof and cracked a skylight."
+        },
+        "incident_location": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "2143 Park Blvd, Princeton, NJ",
+          "predicted": "2143 Park Blvd, Princeton, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "property",
+          "predicted": "property"
+        },
+        "policy_number": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "POL-100010",
+          "predicted": "POL-100010"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "3-bedroom single-family home",
+          "predicted": "3-bedroom single-family home"
+        }
+      },
+      "latency_extract_s": 6.128,
+      "latency_total_s": 11.666,
+      "latency_triage_s": 5.511,
+      "loss_type": "property",
+      "messy": false,
+      "mismatch_detected": true,
+      "reasons_predicted": [
+        "Date of loss has low confidence (0.30) and needs adjuster review.",
+        "Consistency check flagged a problem: The claim form (doc_312347a1.pdf) describes a hailstorm that dented the roof and cracked a skylight, with loss type 'property' and $32,607.97 in damage. The photo (doc_36e0ae67.jpg) shows a large curbside pile of torn-out carpet, drywall and other interior debris in front of the house. That looks like interior gutting after flooding or water damage, not hail. The roof in the photo shows no visible dents, and no cracked skylight is visible. The form's other details (policy number, claimant, address, date of loss, amount) match the extracted data. The photo contradicts the described incident, so the loss type and cause are in question and the claim should be reviewed."
+      ],
+      "route_correct": true,
+      "route_expected": "needs_more_info",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0063",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_ce69d60a.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "police_report",
+          "filename": "doc_c705ebad.pdf",
+          "predicted": "police_report"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_be8446d1.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form and police report agree on policy number, date, location, theft loss type, and description (vehicle broken into overnight; electronics and a bag taken). The photo (doc_be8446d1.jpg), however, shows the interior of a gutted room with exposed wall studs and insulation, debris on the floor, and a powered mobility chair. It shows no vehicle, no break-in damage to a 2023 Subaru Outback, and no sign of theft. This contradicts the described incident of a vehicle break-in, so the photo does not support the claim's incident.",
+      "consistency_severity": "major",
+      "consistency_skipped": false,
+      "cost_usd": 0.006036,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Li Lewis",
+          "predicted": "Li Lewis"
+        },
+        "date_of_loss": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "2026-08-27",
+          "predicted": "2026-08-27"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": 18511.84,
+          "predicted": 18511.84
+        },
+        "incident_description": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "Vehicle broken into overnight; electronics and a bag were taken.",
+          "predicted": "Vehicle broken into overnight; electronics and a bag were taken."
+        },
+        "incident_location": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "7127 Washington Ave, Newark, NJ",
+          "predicted": "7127 Washington Ave, Newark, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "theft",
+          "predicted": "theft"
+        },
+        "policy_number": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "POL-100008",
+          "predicted": "POL-100008"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "2023 Subaru Outback",
+          "predicted": "2023 Subaru Outback"
+        }
+      },
+      "latency_extract_s": 5.85,
+      "latency_total_s": 21.358,
+      "latency_triage_s": 15.474,
+      "loss_type": "theft",
+      "messy": false,
+      "mismatch_detected": true,
+      "reasons_predicted": [
+        "Consistency check flagged a problem: The claim form and police report agree on policy number, date, location, theft loss type, and description (vehicle broken into overnight; electronics and a bag taken). The photo (doc_be8446d1.jpg), however, shows the interior of a gutted room with exposed wall studs and insulation, debris on the floor, and a powered mobility chair. It shows no vehicle, no break-in damage to a 2023 Subaru Outback, and no sign of theft. This contradicts the described incident of a vehicle break-in, so the photo does not support the claim's incident."
+      ],
+      "route_correct": true,
+      "route_expected": "needs_more_info",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0054",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_763510d7.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_e330c3e2.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form and extracted data describe a property loss: a windstorm tore shingles from the roof of a 4-bedroom colonial house and rain leaked into the attic. The uploaded photo (doc_e330c3e2.jpg) shows a silver passenger car with a dented, crumpled side door, a taped plastic sheet over a broken window, and front fender damage, which looks like collision damage. It shows no house, roof, shingles or attic. The photo contradicts the described incident and loss type, so the claim should go to review. The policy number, claimant, date, location, and amount ($21,447.58) match between the form and the extracted data.",
+      "consistency_severity": "major",
+      "consistency_skipped": false,
+      "cost_usd": 0.006163999999999999,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Aisha Thomas",
+          "predicted": "Aisha Thomas"
+        },
+        "date_of_loss": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "2025-11-09",
+          "predicted": "2025-11-09"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": 21447.58,
+          "predicted": 21447.58
+        },
+        "incident_description": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "Windstorm tore shingles from the roof and rain leaked into the attic.",
+          "predicted": "Windstorm tore shingles from the roof and rain leaked into the attic."
+        },
+        "incident_location": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "6698 Park Blvd, Hoboken, NJ",
+          "predicted": "6698 Park Blvd, Hoboken, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "property",
+          "predicted": "property"
+        },
+        "policy_number": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "POL-100009",
+          "predicted": "POL-100009"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "4-bedroom colonial house",
+          "predicted": "4-bedroom colonial house"
+        }
+      },
+      "latency_extract_s": 5.599,
+      "latency_total_s": 11.265,
+      "latency_triage_s": 5.629,
+      "loss_type": "property",
+      "messy": false,
+      "mismatch_detected": true,
+      "reasons_predicted": [
+        "Consistency check flagged a problem: The claim form and extracted data describe a property loss: a windstorm tore shingles from the roof of a 4-bedroom colonial house and rain leaked into the attic. The uploaded photo (doc_e330c3e2.jpg) shows a silver passenger car with a dented, crumpled side door, a taped plastic sheet over a broken window, and front fender damage, which looks like collision damage. It shows no house, roof, shingles or attic. The photo contradicts the described incident and loss type, so the claim should go to review. The policy number, claimant, date, location, and amount ($21,447.58) match between the form and the extracted data."
+      ],
+      "route_correct": true,
+      "route_expected": "needs_more_info",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0085",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_584bff40.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_9ecbd605.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form matches the extracted claim on every field: policy POL-100004, insured Sofia Garcia, date of loss 06/03/2023, property loss, 9215 Elm St, Elizabeth, NJ, the hail description, $7,779.30, and a single-story ranch home. The photo shows two inspectors in a house interior with lower wall sections cut out and a bare floor. It does not show the roof or skylight, and it has no caption, date, or address tying it to a different incident. Because the photo does not state anything specific that contradicts the hail description, this is not a concrete contradiction.",
+      "consistency_severity": null,
+      "consistency_skipped": false,
+      "cost_usd": 0.012588,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Sofia Garcia",
+          "predicted": "Sofia Garcia"
+        },
+        "date_of_loss": {
+          "confidence": 0.85,
+          "correct": true,
+          "expected": "2023-06-03",
+          "predicted": "2023-06-03"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": 7779.3,
+          "predicted": 7779.3
+        },
+        "incident_description": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "Hailstorm dented the roof and cracked a skylight.",
+          "predicted": "Hailstorm dented the roof and cracked a skylight."
+        },
+        "incident_location": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "9215 Elm St, Elizabeth, NJ",
+          "predicted": "9215 Elm St, Elizabeth, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "property",
+          "predicted": "property"
+        },
+        "policy_number": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "POL-100004",
+          "predicted": "POL-100004"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "single-story ranch home",
+          "predicted": "single-story ranch home"
+        }
+      },
+      "latency_extract_s": 6.392,
+      "latency_total_s": 33.521,
+      "latency_triage_s": 27.096,
+      "loss_type": "property",
+      "messy": false,
+      "mismatch_detected": true,
+      "reasons_predicted": [
+        "All required checks passed."
+      ],
+      "route_correct": false,
+      "route_expected": "needs_more_info",
+      "route_predicted": "ready_for_adjuster",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0062",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_1266df08.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_c069f440.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form and the extracted claim describe a property loss: a hailstorm that dented the roof and cracked a skylight at a townhouse, with the loss type box marked 'property'. The uploaded photo (doc_c069f440.jpg) instead shows a black car that has crashed into a tree, with a crumpled hood, a shattered windshield and front-end collision damage. There is no townhouse, roof, skylight or hail damage in the photo. The photo contradicts the described incident and the loss type (property vs. auto collision). The other fields (policy number POL-100007, insured Daniel Anderson, loss date 2026-11-26, location, and amount $124,340.67) match between the form and the extraction.",
+      "consistency_severity": "major",
+      "consistency_skipped": false,
+      "cost_usd": 0.0066,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Daniel Anderson",
+          "predicted": "Daniel Anderson"
+        },
+        "date_of_loss": {
+          "confidence": 0.3,
+          "correct": true,
+          "expected": "2026-11-26",
+          "predicted": "2026-11-26"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": 124340.67,
+          "predicted": 124340.67
+        },
+        "incident_description": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "Hailstorm dented the roof and cracked a skylight.",
+          "predicted": "Hailstorm dented the roof and cracked a skylight."
+        },
+        "incident_location": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "8508 Washington Ave, Jersey City, NJ",
+          "predicted": "8508 Washington Ave, Jersey City, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "property",
+          "predicted": "property"
+        },
+        "policy_number": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "POL-100007",
+          "predicted": "POL-100007"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "townhouse",
+          "predicted": "townhouse"
+        }
+      },
+      "latency_extract_s": 6.549,
+      "latency_total_s": 12.166,
+      "latency_triage_s": 5.58,
+      "loss_type": "property",
+      "messy": false,
+      "mismatch_detected": true,
+      "reasons_predicted": [
+        "Date of loss has low confidence (0.30) and needs adjuster review.",
+        "Consistency check flagged a problem: The claim form and the extracted claim describe a property loss: a hailstorm that dented the roof and cracked a skylight at a townhouse, with the loss type box marked 'property'. The uploaded photo (doc_c069f440.jpg) instead shows a black car that has crashed into a tree, with a crumpled hood, a shattered windshield and front-end collision damage. There is no townhouse, roof, skylight or hail damage in the photo. The photo contradicts the described incident and the loss type (property vs. auto collision). The other fields (policy number POL-100007, insured Daniel Anderson, loss date 2026-11-26, location, and amount $124,340.67) match between the form and the extraction."
+      ],
+      "route_correct": true,
+      "route_expected": "needs_more_info",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0032",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_9099842f.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "repair_estimate",
+          "filename": "doc_606ec668.pdf",
+          "predicted": "repair_estimate"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_1c4c2e10.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": true,
+      "consistency_notes": "Several contradictions. (1) Amount: the claim form and extracted claim state $231,873.85; the repair estimate states a total of $299,295.90. (2) Incident: the description and claim form say a side impact in a parking lot while reversing; the photo shows a dark car with severe front-end collision damage (crushed hood, shattered windshield) wrapped against a tree on a grass verge beside a street, not a parking lot. The repair estimate also lists front bumper replacement, which does not match a side impact. (3) Vehicle: the form lists a 2017 Jeep Wrangler, while the photo shows a small dark hatchback/sedan, not a Wrangler. The estimate line items ($80,259.55 + $88,695.68 + $64,427.42 + $65,913.25) do sum to $299,295.90, so the estimate is internally consistent and the discrepancy is with the claimed amount.",
+      "consistency_severity": "major",
+      "consistency_skipped": false,
+      "cost_usd": 0.007554,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Omar Garcia",
+          "predicted": "Omar Garcia"
+        },
+        "date_of_loss": {
+          "confidence": 0.3,
+          "correct": true,
+          "expected": "2027-10-12",
+          "predicted": "2027-10-12"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.8,
+          "correct": true,
+          "expected": 231873.85,
+          "predicted": 231873.85
+        },
+        "incident_description": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "Side impact in a parking lot while reversing out of a space.",
+          "predicted": "Side impact in a parking lot while reversing out of a space."
+        },
+        "incident_location": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "7452 Oak Ave, Atlantic City, NJ",
+          "predicted": "7452 Oak Ave, Atlantic City, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "auto",
+          "predicted": "auto"
+        },
+        "policy_number": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "POL-100007",
+          "predicted": "POL-100007"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "2017 Jeep Wrangler",
+          "predicted": "2017 Jeep Wrangler"
+        }
+      },
+      "latency_extract_s": 6.365,
+      "latency_total_s": 13.402,
+      "latency_triage_s": 6.968,
+      "loss_type": "auto",
+      "messy": true,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Date of loss has low confidence (0.30) and needs adjuster review.",
+        "Consistency check flagged a problem: Several contradictions. (1) Amount: the claim form and extracted claim state $231,873.85; the repair estimate states a total of $299,295.90. (2) Incident: the description and claim form say a side impact in a parking lot while reversing; the photo shows a dark car with severe front-end collision damage (crushed hood, shattered windshield) wrapped against a tree on a grass verge beside a street, not a parking lot. The repair estimate also lists front bumper replacement, which does not match a side impact. (3) Vehicle: the form lists a 2017 Jeep Wrangler, while the photo shows a small dark hatchback/sedan, not a Wrangler. The estimate line items ($80,259.55 + $88,695.68 + $64,427.42 + $65,913.25) do sum to $299,295.90, so the estimate is internally consistent and the discrepancy is with the claimed amount."
+      ],
+      "route_correct": true,
+      "route_expected": "needs_more_info",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0029",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_a845807c.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "repair_estimate",
+          "filename": "doc_36ce84ac.pdf",
+          "predicted": "repair_estimate"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_e678883a.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": true,
+      "consistency_notes": "The claim form states an amount claimed of $28,325.20, but the repair estimate for the same policy (POL-100010) lists a total of $37,050.83. That is a difference of $8,724.63. The estimate's line items (drywall $10,259.24, flooring $9,611.47, labor $5,587.59, mold remediation $11,592.53) do add up to $37,050.83, so the discrepancy is in the claimed amount. The other fields match across the form and the estimate: policy number, claimant, date of loss, loss type, location and description. The photo shows a house with debris and a person on a ladder at the roof, which does not clearly contradict the roof leak description.",
+      "consistency_severity": "major",
+      "consistency_skipped": false,
+      "cost_usd": 0.007467999999999999,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "Victor Patel",
+          "predicted": "Victor Patel"
+        },
+        "date_of_loss": {
+          "confidence": 0.3,
+          "correct": true,
+          "expected": "2027-08-08",
+          "predicted": "2027-08-08"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.8,
+          "correct": true,
+          "expected": 28325.2,
+          "predicted": 28325.2
+        },
+        "incident_description": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Roof leak during heavy rain soaked the living room ceiling.",
+          "predicted": "Roof leak during heavy rain soaked the living room ceiling."
+        },
+        "incident_location": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "3405 Cedar Ln, Camden, NJ",
+          "predicted": "3405 Cedar Ln, Camden, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "water damage",
+          "predicted": "water damage"
+        },
+        "policy_number": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "POL-100010",
+          "predicted": "POL-100010"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "3-bedroom single-family home",
+          "predicted": "3-bedroom single-family home"
+        }
+      },
+      "latency_extract_s": 6.61,
+      "latency_total_s": 14.045,
+      "latency_triage_s": 7.406,
+      "loss_type": "water damage",
+      "messy": true,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Date of loss has low confidence (0.30) and needs adjuster review.",
+        "Consistency check flagged a problem: The claim form states an amount claimed of $28,325.20, but the repair estimate for the same policy (POL-100010) lists a total of $37,050.83. That is a difference of $8,724.63. The estimate's line items (drywall $10,259.24, flooring $9,611.47, labor $5,587.59, mold remediation $11,592.53) do add up to $37,050.83, so the discrepancy is in the claimed amount. The other fields match across the form and the estimate: policy number, claimant, date of loss, loss type, location and description. The photo shows a house with debris and a person on a ladder at the roof, which does not clearly contradict the roof leak description."
+      ],
+      "route_correct": true,
+      "route_expected": "needs_more_info",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0072",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_32ab9e64.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "repair_estimate",
+          "filename": "doc_12332430.pdf",
+          "predicted": "repair_estimate"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_cd33c484.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": false,
+      "consistency_notes": null,
+      "consistency_severity": null,
+      "consistency_skipped": true,
+      "cost_usd": 0.0,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "David Lewis",
+          "predicted": "David Lewis"
+        },
+        "date_of_loss": {
+          "confidence": 0.93,
+          "correct": true,
+          "expected": "2026-05-08",
+          "predicted": "2026-05-08"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.8,
+          "correct": true,
+          "expected": 49697.11,
+          "predicted": 49697.11
+        },
+        "incident_description": {
+          "confidence": 0.93,
+          "correct": true,
+          "expected": "Hailstorm dented the roof and cracked a skylight.",
+          "predicted": "Hailstorm dented the roof and cracked a skylight."
+        },
+        "incident_location": {
+          "confidence": 0.93,
+          "correct": true,
+          "expected": "8447 Maple Dr, Atlantic City, NJ",
+          "predicted": "8447 Maple Dr, Atlantic City, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "property",
+          "predicted": "property"
+        },
+        "policy_number": {
+          "confidence": 0.4,
+          "correct": false,
+          "expected": "POL-100003",
+          "predicted": "POL-1000003"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.93,
+          "correct": true,
+          "expected": "4-bedroom colonial house",
+          "predicted": "4-bedroom colonial house"
+        }
+      },
+      "latency_extract_s": 8.976,
+      "latency_total_s": 9.209,
+      "latency_triage_s": 0.19,
+      "loss_type": "property",
+      "messy": true,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Policy number has low confidence (0.40) and needs adjuster review.",
+        "Policy POL-1000003 was not found in the system; verify the policy number.",
+        "Consistency check skipped: policy unknown or inactive on the date of loss, so the claim routes on deterministic checks alone."
+      ],
+      "route_correct": true,
+      "route_expected": "needs_more_info",
+      "route_predicted": "needs_more_info",
+      "scan_strength": "heavy",
+      "scanned": true,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0253",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_d50e5e46.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "repair_estimate",
+          "filename": "doc_07a100ce.pdf",
+          "predicted": "repair_estimate"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form and the repair estimate agree on the key facts. Both show policy number POL-100004. The claim form's estimated loss is $9,471.27, and the repair estimate's total is also $9,471.27. The line items ($2,329.93 + $3,501.60 + $1,756.73 + $1,883.01) sum to that total. The form's description (side impact in a parking lot while reversing), loss type (auto), claimant, date, location and vehicle match the extracted data. The estimate lists a front bumper replacement, but it gives no incident description, so this is not a concrete contradiction.",
+      "consistency_severity": null,
+      "consistency_skipped": false,
+      "cost_usd": 0.007784,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "Priya Lewis",
+          "predicted": "Priya Lewis"
+        },
+        "date_of_loss": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "2023-11-18",
+          "predicted": "2023-11-18"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": 9471.27,
+          "predicted": 9471.27
+        },
+        "incident_description": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Side impact in a parking lot while reversing out of a space.",
+          "predicted": "Side impact in a parking lot while reversing out of a space."
+        },
+        "incident_location": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "2739 Highland Ave, Atlantic City, NJ",
+          "predicted": "2739 Highland Ave, Atlantic City, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "auto",
+          "predicted": "auto"
+        },
+        "policy_number": {
+          "confidence": 0.99,
+          "correct": true,
+          "expected": "POL-100004",
+          "predicted": "POL-100004"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "2020 Hyundai Elantra",
+          "predicted": "2020 Hyundai Elantra"
+        }
+      },
+      "latency_extract_s": 4.236,
+      "latency_total_s": 8.619,
+      "latency_triage_s": 4.358,
+      "loss_type": "auto",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Missing required document: damage photos."
+      ],
+      "route_correct": true,
+      "route_expected": "needs_more_info",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0010",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_1da1f6a5.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_d1157347.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form and the claimant's description say a hailstorm dented the roof and cracked a skylight, for $746.57 in damage. The photo (doc_d1157347.jpg) shows a different kind of damage. A large fallen tree trunk and branches lie across the front of the house, the roofline is open with exposed framing, and debris is scattered through the doorway. That points to wind or tree-fall structural damage, not hail dents and a cracked skylight. The extent of damage in the photo also does not fit a $746.57 claim. All other fields match between the form and the extraction: policy POL-100009, David Kim, 2025-12-05, 4862 Cedar Ln, Newark, NJ, and the $746.57 amount.",
+      "consistency_severity": "major",
+      "consistency_skipped": false,
+      "cost_usd": 0.011034,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "David Kim",
+          "predicted": "David Kim"
+        },
+        "date_of_loss": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "2025-12-05",
+          "predicted": "2025-12-05"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": 746.57,
+          "predicted": 746.57
+        },
+        "incident_description": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "Hailstorm dented the roof and cracked a skylight.",
+          "predicted": "Hailstorm dented the roof and cracked a skylight."
+        },
+        "incident_location": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "4862 Cedar Ln, Newark, NJ",
+          "predicted": "4862 Cedar Ln, Newark, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "property",
+          "predicted": "property"
+        },
+        "policy_number": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "POL-100009",
+          "predicted": "POL-100009"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "single-story ranch home",
+          "predicted": "single-story ranch home"
+        }
+      },
+      "latency_extract_s": 7.142,
+      "latency_total_s": 13.951,
+      "latency_triage_s": 6.776,
+      "loss_type": "property",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Estimated damage ($746.57) is at or below the deductible ($1,000.00), so no payout would be due.",
+        "Consistency check flagged a problem: The claim form and the claimant's description say a hailstorm dented the roof and cracked a skylight, for $746.57 in damage. The photo (doc_d1157347.jpg) shows a different kind of damage. A large fallen tree trunk and branches lie across the front of the house, the roofline is open with exposed framing, and debris is scattered through the doorway. That points to wind or tree-fall structural damage, not hail dents and a cracked skylight. The extent of damage in the photo also does not fit a $746.57 claim. All other fields match between the form and the extraction: policy POL-100009, David Kim, 2025-12-05, 4862 Cedar Ln, Newark, NJ, and the $746.57 amount."
+      ],
+      "route_correct": true,
+      "route_expected": "likely_not_covered",
+      "route_predicted": "likely_not_covered",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0088",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_5b430772.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_c145f650.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The extracted fields match the claim form: policy POL-100009, insured Daniel Jackson, date of loss 2025-12-02, loss type property, location 7551 Maple Dr, Atlantic City, NJ, amount $19,559.69, and property info 2-bedroom apartment. The description matches the claimant's text word for word. The photo shows heavy wind-type destruction, with a collapsed structure and scattered debris and building materials, which is consistent with a windstorm property loss. No specific contradiction was found between sources. The photo shows more severe destruction than roof shingle loss and attic leakage, but that is a vague impression and not a concrete mismatch.",
+      "consistency_severity": null,
+      "consistency_skipped": false,
+      "cost_usd": 0.006166,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Daniel Jackson",
+          "predicted": "Daniel Jackson"
+        },
+        "date_of_loss": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "2025-12-02",
+          "predicted": "2025-12-02"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": 19559.69,
+          "predicted": 19559.69
+        },
+        "incident_description": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "Windstorm tore shingles from the roof and rain leaked into the attic.",
+          "predicted": "Windstorm tore shingles from the roof and rain leaked into the attic."
+        },
+        "incident_location": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "7551 Maple Dr, Atlantic City, NJ",
+          "predicted": "7551 Maple Dr, Atlantic City, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "property",
+          "predicted": "property"
+        },
+        "policy_number": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "POL-100009",
+          "predicted": "POL-100009"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.93,
+          "correct": true,
+          "expected": "2-bedroom apartment",
+          "predicted": "2-bedroom apartment"
+        }
+      },
+      "latency_extract_s": 5.615,
+      "latency_total_s": 12.012,
+      "latency_triage_s": 6.369,
+      "loss_type": "property",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "All required checks passed."
+      ],
+      "route_correct": true,
+      "route_expected": "ready_for_adjuster",
+      "route_predicted": "ready_for_adjuster",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0170",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_d092e6e6.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "police_report",
+          "filename": "doc_439cdfed.pdf",
+          "predicted": "police_report"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form and the police report agree on the date of loss (2026-10-11 / 10/11/2026), the location (3191 Main St, Hoboken, NJ), and the incident (bicycle and power tools taken from the backyard shed). The form's policy number, claimant name and theft loss type match the extracted claim. The police report gives no amount, so there is nothing to contradict the $64,769.87 estimate. The form lists a 2022 Tesla Model 3 under vehicle details, which the police report does not mention. That is an omission, not a contradiction between the two sources.",
+      "consistency_severity": null,
+      "consistency_skipped": false,
+      "cost_usd": 0.008492,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Grace Wilson",
+          "predicted": "Grace Wilson"
+        },
+        "date_of_loss": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "2026-10-11",
+          "predicted": "2026-10-11"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.93,
+          "correct": true,
+          "expected": 64769.87,
+          "predicted": 64769.87
+        },
+        "incident_description": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "Bicycle and power tools taken from the backyard shed.",
+          "predicted": "Bicycle and power tools taken from the backyard shed."
+        },
+        "incident_location": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "3191 Main St, Hoboken, NJ",
+          "predicted": "3191 Main St, Hoboken, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "theft",
+          "predicted": "theft"
+        },
+        "policy_number": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "POL-100008",
+          "predicted": "POL-100008"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.85,
+          "correct": true,
+          "expected": "2022 Tesla Model 3",
+          "predicted": "2022 Tesla Model 3"
+        }
+      },
+      "latency_extract_s": 3.174,
+      "latency_total_s": 6.784,
+      "latency_triage_s": 3.575,
+      "loss_type": "theft",
+      "messy": true,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "All required checks passed.",
+        "Estimated damage ($64,769.87) exceeds the coverage limit ($30,000.00); payout would be capped at the limit."
+      ],
+      "route_correct": true,
+      "route_expected": "ready_for_adjuster",
+      "route_predicted": "ready_for_adjuster",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0128",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_121d004e.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "repair_estimate",
+          "filename": "doc_f341966b.pdf",
+          "predicted": "repair_estimate"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_1f3e83d4.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": null,
+      "consistency_severity": null,
+      "consistency_skipped": true,
+      "cost_usd": 0.0,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Fatima Jackson",
+          "predicted": "Fatima Jackson"
+        },
+        "date_of_loss": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "2025-04-29",
+          "predicted": "2025-04-29"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": 6858.71,
+          "predicted": 6858.71
+        },
+        "incident_description": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "Front-end collision after sliding on wet pavement into a guardrail.",
+          "predicted": "Front-end collision after sliding on wet pavement into a guardrail."
+        },
+        "incident_location": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "8014 Washington Ave, Jersey City, NJ",
+          "predicted": "8014 Washington Ave, Jersey City, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "auto",
+          "predicted": "auto"
+        },
+        "policy_number": {
+          "confidence": 0.4,
+          "correct": true,
+          "expected": "POL-900060",
+          "predicted": "POL-900060"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "2023 Subaru Outback",
+          "predicted": "2023 Subaru Outback"
+        }
+      },
+      "latency_extract_s": 3.501,
+      "latency_total_s": 3.711,
+      "latency_triage_s": 0.165,
+      "loss_type": "auto",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Policy number has low confidence (0.40) and needs adjuster review.",
+        "Policy POL-900060 was not found in the system; verify the policy number.",
+        "Consistency check skipped: policy unknown or inactive on the date of loss, so the claim routes on deterministic checks alone."
+      ],
+      "route_correct": true,
+      "route_expected": "needs_more_info",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0064",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_5223db5e.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "repair_estimate",
+          "filename": "doc_0a829d0b.pdf",
+          "predicted": "repair_estimate"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_7f754892.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form and the description both say a front-end collision into a guardrail, and the repair estimate lists a front bumper replacement. The photo (doc_7f754892.jpg) instead shows a silver car with a crumpled side door and fender panel and a broken side window covered with plastic and tape. No front-end or bumper damage is visible. The policy number (POL-100006) and the amount ($4,537.22 on the form and the estimate total, with line items that sum correctly) match across the form and the estimate. The mismatch is between the photographed damage and the described incident and estimate.",
+      "consistency_severity": "major",
+      "consistency_skipped": false,
+      "cost_usd": 0.012878,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "David White",
+          "predicted": "David White"
+        },
+        "date_of_loss": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "2024-12-08",
+          "predicted": "2024-12-08"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": 4537.22,
+          "predicted": 4537.22
+        },
+        "incident_description": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Front-end collision after sliding on wet pavement into a guardrail.",
+          "predicted": "Front-end collision after sliding on wet pavement into a guardrail."
+        },
+        "incident_location": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "6013 Elm St, Atlantic City, NJ",
+          "predicted": "6013 Elm St, Atlantic City, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "auto",
+          "predicted": "auto"
+        },
+        "policy_number": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "POL-100006",
+          "predicted": "POL-100006"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "2020 Hyundai Elantra",
+          "predicted": "2020 Hyundai Elantra"
+        }
+      },
+      "latency_extract_s": 8.097,
+      "latency_total_s": 46.104,
+      "latency_triage_s": 37.978,
+      "loss_type": "auto",
+      "messy": true,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Loss type auto is excluded under this policy.",
+        "Consistency check flagged a problem: The claim form and the description both say a front-end collision into a guardrail, and the repair estimate lists a front bumper replacement. The photo (doc_7f754892.jpg) instead shows a silver car with a crumpled side door and fender panel and a broken side window covered with plastic and tape. No front-end or bumper damage is visible. The policy number (POL-100006) and the amount ($4,537.22 on the form and the estimate total, with line items that sum correctly) match across the form and the estimate. The mismatch is between the photographed damage and the described incident and estimate."
+      ],
+      "route_correct": true,
+      "route_expected": "likely_not_covered",
+      "route_predicted": "likely_not_covered",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0181",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_e839a92d.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_8a21888f.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form (doc_e839a92d.pdf) matches the extracted data: policy POL-100007, insured Omar Wilson, date of loss 2027-12-09, loss type property, estimated damage $158,728.87, and a 3-bedroom single-family home. The form's incident description matches the claimant's description (windstorm tore shingles from the roof, rain leaked into the attic). The photo (doc_8a21888f.jpg) shows a house interior with the roof torn open, exposed rafters, and debris, which is consistent with windstorm roof damage. No specific contradiction was found between the sources. Incident location is missing from both the form and the extraction, which is an omission rather than a contradiction. The date of loss has low extraction confidence (0.3), but it matches the form.",
+      "consistency_severity": null,
+      "consistency_skipped": false,
+      "cost_usd": 0.005876,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "Omar Wilson",
+          "predicted": "Omar Wilson"
+        },
+        "date_of_loss": {
+          "confidence": 0.3,
+          "correct": true,
+          "expected": "2027-12-09",
+          "predicted": "2027-12-09"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": 158728.87,
+          "predicted": 158728.87
+        },
+        "incident_description": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "Windstorm tore shingles from the roof and rain leaked into the attic.",
+          "predicted": "Windstorm tore shingles from the roof and rain leaked into the attic."
+        },
+        "incident_location": {
+          "confidence": 0.05,
+          "correct": true,
+          "expected": null,
+          "predicted": null
+        },
+        "loss_type": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "property",
+          "predicted": "property"
+        },
+        "policy_number": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "POL-100007",
+          "predicted": "POL-100007"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.93,
+          "correct": true,
+          "expected": "3-bedroom single-family home",
+          "predicted": "3-bedroom single-family home"
+        }
+      },
+      "latency_extract_s": 3.115,
+      "latency_total_s": 6.643,
+      "latency_triage_s": 3.496,
+      "loss_type": "property",
+      "messy": true,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Date of loss has low confidence (0.30) and needs adjuster review.",
+        "Incident location was not extracted from the documents."
+      ],
+      "route_correct": true,
+      "route_expected": "needs_more_info",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0232",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_0463c368.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "police_report",
+          "filename": "doc_865a6e0a.pdf",
+          "predicted": "police_report"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": null,
+      "consistency_severity": null,
+      "consistency_skipped": true,
+      "cost_usd": 0.0,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Daniel Patel",
+          "predicted": "Daniel Patel"
+        },
+        "date_of_loss": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "2024-01-02",
+          "predicted": "2024-01-02"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": 18222.44,
+          "predicted": 18222.44
+        },
+        "incident_description": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Tools stolen from a locked garage after the side door was forced.",
+          "predicted": "Tools stolen from a locked garage after the side door was forced."
+        },
+        "incident_location": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "9294 Highland Ave, Atlantic City, NJ",
+          "predicted": "9294 Highland Ave, Atlantic City, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "theft",
+          "predicted": "theft"
+        },
+        "policy_number": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "POL-100004",
+          "predicted": "POL-100004"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.9,
+          "correct": true,
+          "expected": "2020 Hyundai Elantra",
+          "predicted": "2020 Hyundai Elantra"
+        }
+      },
+      "latency_extract_s": 3.452,
+      "latency_total_s": 3.648,
+      "latency_triage_s": 0.173,
+      "loss_type": "theft",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Policy was not active on the date of loss (2024-01-02).",
+        "Consistency check skipped: policy unknown or inactive on the date of loss, so the claim routes on deterministic checks alone."
+      ],
+      "route_correct": true,
+      "route_expected": "likely_not_covered",
+      "route_predicted": "likely_not_covered",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0283",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_d728d2ea.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_94a3634d.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form and the extracted data describe a hailstorm that dented the roof and cracked a skylight, with an estimate of $10,326.72. The photo (doc_94a3634d.jpg) shows the roof structure torn open and partly collapsed, with exposed rafters and lumber and sheet-metal debris across the lawn. That looks like severe structural wind or storm destruction, not dents and a cracked skylight. The photo also shows a low, sprawling house with several gabled sections, which does not clearly match the '4-bedroom colonial house' on the form. The form, policy number, name, date, location, loss type and amount all agree with each other. The mismatch is between the described incident and the photographed damage, which affects the cause of loss and the plausibility of the amount, so the claim should go to review.",
+      "consistency_severity": null,
+      "consistency_skipped": false,
+      "cost_usd": 0.009382,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "Fatima Lewis",
+          "predicted": "Fatima Lewis"
+        },
+        "date_of_loss": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "2024-01-07",
+          "predicted": "2024-01-07"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": 10326.72,
+          "predicted": 10326.72
+        },
+        "incident_description": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Hailstorm dented the roof and cracked a skylight.",
+          "predicted": "Hailstorm dented the roof and cracked a skylight."
+        },
+        "incident_location": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "7975 Washington Ave, Hoboken, NJ",
+          "predicted": "7975 Washington Ave, Hoboken, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "property",
+          "predicted": "property"
+        },
+        "policy_number": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "POL-200002",
+          "predicted": "POL-200002"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "4-bedroom colonial house",
+          "predicted": "4-bedroom colonial house"
+        }
+      },
+      "latency_extract_s": 3.566,
+      "latency_total_s": 8.786,
+      "latency_triage_s": 5.183,
+      "loss_type": "property",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Consistency check flagged a problem: The claim form and the extracted data describe a hailstorm that dented the roof and cracked a skylight, with an estimate of $10,326.72. The photo (doc_94a3634d.jpg) shows the roof structure torn open and partly collapsed, with exposed rafters and lumber and sheet-metal debris across the lawn. That looks like severe structural wind or storm destruction, not dents and a cracked skylight. The photo also shows a low, sprawling house with several gabled sections, which does not clearly match the '4-bedroom colonial house' on the form. The form, policy number, name, date, location, loss type and amount all agree with each other. The mismatch is between the described incident and the photographed damage, which affects the cause of loss and the plausibility of the amount, so the claim should go to review."
+      ],
+      "route_correct": false,
+      "route_expected": "ready_for_adjuster",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0199",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_a0e49c29.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "police_report",
+          "filename": "doc_edb81598.pdf",
+          "predicted": "police_report"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_58882a36.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": null,
+      "consistency_severity": null,
+      "consistency_skipped": true,
+      "cost_usd": 0.0,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Fatima White",
+          "predicted": "Fatima White"
+        },
+        "date_of_loss": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "2023-11-29",
+          "predicted": "2023-11-29"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": 8650.68,
+          "predicted": 8650.68
+        },
+        "incident_description": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "Bicycle and power tools taken from the backyard shed.",
+          "predicted": "Bicycle and power tools taken from the backyard shed."
+        },
+        "incident_location": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "1632 Park Blvd, Paterson, NJ",
+          "predicted": "1632 Park Blvd, Paterson, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "theft",
+          "predicted": "theft"
+        },
+        "policy_number": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "POL-200002",
+          "predicted": "POL-200002"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.85,
+          "correct": true,
+          "expected": "2021 Honda Civic",
+          "predicted": "2021 Honda Civic"
+        }
+      },
+      "latency_extract_s": 3.71,
+      "latency_total_s": 3.905,
+      "latency_triage_s": 0.159,
+      "loss_type": "theft",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Policy was not active on the date of loss (2023-11-29).",
+        "Consistency check skipped: policy unknown or inactive on the date of loss, so the claim routes on deterministic checks alone."
+      ],
+      "route_correct": true,
+      "route_expected": "likely_not_covered",
+      "route_predicted": "likely_not_covered",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0211",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_b4c28180.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "repair_estimate",
+          "filename": "doc_5becf0cc.pdf",
+          "predicted": "repair_estimate"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_14a9d50c.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": null,
+      "consistency_severity": null,
+      "consistency_skipped": true,
+      "cost_usd": 0.0,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Omar Kim",
+          "predicted": "Omar Kim"
+        },
+        "date_of_loss": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "2025-02-16",
+          "predicted": "2025-02-16"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": 7342.05,
+          "predicted": 7342.05
+        },
+        "incident_description": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Water heater failed and leaked across the basement floor.",
+          "predicted": "Water heater failed and leaked across the basement floor."
+        },
+        "incident_location": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "186 Cedar Ln, Camden, NJ",
+          "predicted": "186 Cedar Ln, Camden, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "water damage",
+          "predicted": "water damage"
+        },
+        "policy_number": {
+          "confidence": 0.4,
+          "correct": true,
+          "expected": "POL-900052",
+          "predicted": "POL-900052"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "3-bedroom single-family home",
+          "predicted": "3-bedroom single-family home"
+        }
+      },
+      "latency_extract_s": 3.799,
+      "latency_total_s": 4.01,
+      "latency_triage_s": 0.162,
+      "loss_type": "water damage",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Policy number has low confidence (0.40) and needs adjuster review.",
+        "Policy POL-900052 was not found in the system; verify the policy number.",
+        "Consistency check skipped: policy unknown or inactive on the date of loss, so the claim routes on deterministic checks alone."
+      ],
+      "route_correct": true,
+      "route_expected": "needs_more_info",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0212",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_eea47632.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "repair_estimate",
+          "filename": "doc_b63309cb.pdf",
+          "predicted": "repair_estimate"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_2e22d1d5.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form and repair estimate agree on the key fields. Both show policy POL-100003, and the form's estimated damage of $44,163.24 matches the estimate's total. The line items (14,172.86 + 9,238.64 + 9,593.65 + 11,158.09) sum to that same figure. The form's name, date, location, loss type (property) and description are internally consistent. The photo shows a house with severe roof damage and exposed framing. That is a property loss at a residence, in line with the roof repair, drywall and debris removal items in the estimate. The photo looks more severe than 'dented the roof and cracked a skylight', but it does not concretely contradict the claim's loss type, amount or incident, so I am not flagging it.",
+      "consistency_severity": null,
+      "consistency_skipped": false,
+      "cost_usd": 0.013188,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Omar Martinez",
+          "predicted": "Omar Martinez"
+        },
+        "date_of_loss": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "2026-10-07",
+          "predicted": "2026-10-07"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": 44163.24,
+          "predicted": 44163.24
+        },
+        "incident_description": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "Hailstorm dented the roof and cracked a skylight.",
+          "predicted": "Hailstorm dented the roof and cracked a skylight."
+        },
+        "incident_location": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "7578 Elm St, Newark, NJ",
+          "predicted": "7578 Elm St, Newark, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "property",
+          "predicted": "property"
+        },
+        "policy_number": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "POL-100003",
+          "predicted": "POL-100003"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "4-bedroom colonial house",
+          "predicted": "4-bedroom colonial house"
+        }
+      },
+      "latency_extract_s": 3.608,
+      "latency_total_s": 7.778,
+      "latency_triage_s": 4.129,
+      "loss_type": "property",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "All required checks passed."
+      ],
+      "route_correct": true,
+      "route_expected": "ready_for_adjuster",
+      "route_predicted": "ready_for_adjuster",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0057",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_c8ba7631.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "police_report",
+          "filename": "doc_07929f73.pdf",
+          "predicted": "police_report"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_3a7e5d57.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form and police report both describe a theft of a bicycle and power tools from a backyard shed at 855 River Rd, Atlantic City, NJ on December 22, 2025. The uploaded photo (doc_3a7e5d57.jpg) shows a silver car with a crushed, dented driver-side door, a missing window replaced by plastic sheeting, and damage along the side panel and front fender. That looks like vehicle collision damage, not a shed theft. The form's vehicle/property details field also lists a '2021 Honda Civic', which has no connection to a bicycle and tools theft from a shed. The $76,268.68 claimed amount is also very high for a bicycle and power tools. The photo contradicts the described incident, so the claim needs review.",
+      "consistency_severity": "major",
+      "consistency_skipped": false,
+      "cost_usd": 0.006706,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.05,
+          "correct": true,
+          "expected": null,
+          "predicted": null
+        },
+        "date_of_loss": {
+          "confidence": 0.93,
+          "correct": true,
+          "expected": "2025-12-22",
+          "predicted": "2025-12-22"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.93,
+          "correct": true,
+          "expected": 76268.68,
+          "predicted": 76268.68
+        },
+        "incident_description": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "Bicycle and power tools taken from the backyard shed.",
+          "predicted": "Bicycle and power tools taken from the backyard shed."
+        },
+        "incident_location": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "855 River Rd, Atlantic City, NJ",
+          "predicted": "855 River Rd, Atlantic City, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "theft",
+          "predicted": "theft"
+        },
+        "policy_number": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "POL-100003",
+          "predicted": "POL-100003"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.8,
+          "correct": true,
+          "expected": "2021 Honda Civic",
+          "predicted": "2021 Honda Civic"
+        }
+      },
+      "latency_extract_s": 6.345,
+      "latency_total_s": 12.378,
+      "latency_triage_s": 5.986,
+      "loss_type": "theft",
+      "messy": true,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Claimant name was not extracted from the documents.",
+        "Consistency check flagged a problem: The claim form and police report both describe a theft of a bicycle and power tools from a backyard shed at 855 River Rd, Atlantic City, NJ on December 22, 2025. The uploaded photo (doc_3a7e5d57.jpg) shows a silver car with a crushed, dented driver-side door, a missing window replaced by plastic sheeting, and damage along the side panel and front fender. That looks like vehicle collision damage, not a shed theft. The form's vehicle/property details field also lists a '2021 Honda Civic', which has no connection to a bicycle and tools theft from a shed. The $76,268.68 claimed amount is also very high for a bicycle and power tools. The photo contradicts the described incident, so the claim needs review."
+      ],
+      "route_correct": true,
+      "route_expected": "needs_more_info",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0226",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "repair_estimate",
+          "filename": "doc_a73218d6.pdf",
+          "predicted": "repair_estimate"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_83a165e4.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The policy number POL-100008 matches the repair estimate. The estimate's line items ($5,697.14 + $4,345.68 + $5,167.82 + $5,225.58) sum to $20,436.22, which matches the extracted damage amount. The photo shows a heavily damaged vehicle with a crushed roof, shattered windshield and front and side damage, which matches the auto loss type and the incident description. No contradiction between sources. The tax line ($5,225.58) is unusually high, but that is not a conflict between documents.",
+      "consistency_severity": null,
+      "consistency_skipped": false,
+      "cost_usd": 0.00705,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.0,
+          "correct": true,
+          "expected": null,
+          "predicted": null
+        },
+        "date_of_loss": {
+          "confidence": 0.0,
+          "correct": true,
+          "expected": null,
+          "predicted": null
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.9,
+          "correct": true,
+          "expected": 20436.22,
+          "predicted": 20436.22
+        },
+        "incident_description": {
+          "confidence": 0.6,
+          "correct": false,
+          "expected": null,
+          "predicted": "Photo shows a severely damaged vehicle with a crushed roof, shattered windshield, and heavy front and side collision damage."
+        },
+        "incident_location": {
+          "confidence": 0.0,
+          "correct": true,
+          "expected": null,
+          "predicted": null
+        },
+        "loss_type": {
+          "confidence": 0.85,
+          "correct": false,
+          "expected": null,
+          "predicted": "auto"
+        },
+        "policy_number": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "POL-100008",
+          "predicted": "POL-100008"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.4,
+          "correct": false,
+          "expected": null,
+          "predicted": "Heavily damaged dark-colored pickup-style vehicle with crushed cab and front end damage; make, model, and year not identified."
+        }
+      },
+      "latency_extract_s": 3.739,
+      "latency_total_s": 7.641,
+      "latency_triage_s": 3.866,
+      "loss_type": "auto",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Claimant name was not extracted from the documents.",
+        "Date of loss was not extracted from the documents.",
+        "Incident location was not extracted from the documents.",
+        "Incident description has low confidence (0.60) and needs adjuster review.",
+        "Vehicle or property details has low confidence (0.40) and needs adjuster review.",
+        "Date of loss is missing, so policy coverage dates could not be checked.",
+        "Missing required document: claim form."
+      ],
+      "route_correct": true,
+      "route_expected": "needs_more_info",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0294",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_17b1d054.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_0b5d24ae.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The extracted fields match the claim form: policy POL-100008, insured Nina Johnson, date of loss 08/01/2026, loss type property, location 6188 Highland Ave, Trenton, NJ, amount $8,007.72, and a 4-bedroom colonial house. The description is identical in both. The photo shows an interior with the roof torn off, exposed rafters and storm debris, which fits a windstorm. It does not contradict the described incident or the loss type, and there is no second source with a different amount.",
+      "consistency_severity": null,
+      "consistency_skipped": false,
+      "cost_usd": 0.005654,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Nina Johnson",
+          "predicted": "Nina Johnson"
+        },
+        "date_of_loss": {
+          "confidence": 0.8,
+          "correct": true,
+          "expected": "2026-08-01",
+          "predicted": "2026-08-01"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": 8007.72,
+          "predicted": 8007.72
+        },
+        "incident_description": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "Windstorm tore shingles from the roof and rain leaked into the attic.",
+          "predicted": "Windstorm tore shingles from the roof and rain leaked into the attic."
+        },
+        "incident_location": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "6188 Highland Ave, Trenton, NJ",
+          "predicted": "6188 Highland Ave, Trenton, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "property",
+          "predicted": "property"
+        },
+        "policy_number": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "POL-100008",
+          "predicted": "POL-100008"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "4-bedroom colonial house",
+          "predicted": "4-bedroom colonial house"
+        }
+      },
+      "latency_extract_s": 3.228,
+      "latency_total_s": 6.424,
+      "latency_triage_s": 3.166,
+      "loss_type": "property",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Loss type property is excluded under this policy."
+      ],
+      "route_correct": true,
+      "route_expected": "likely_not_covered",
+      "route_predicted": "likely_not_covered",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0098",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_3292daab.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "repair_estimate",
+          "filename": "doc_aa484986.pdf",
+          "predicted": "repair_estimate"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_50e15da5.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The policy number POL-100011 is the same on the claim form and the repair estimate. The claim form amount ($144,674.94) equals the estimate total, and the line items sum to that figure (26,488.55 + 53,856.90 + 25,580.59 + 38,748.90). The form's date of loss (10/21/2026), property loss type, insured name and location match the extracted data. The photo shows a roof torn open with debris and storm-type damage, which fits the described windstorm and roof damage. No specific contradiction found.",
+      "consistency_severity": null,
+      "consistency_skipped": false,
+      "cost_usd": 0.00796,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "Daniel Patel",
+          "predicted": "Daniel Patel"
+        },
+        "date_of_loss": {
+          "confidence": 0.9,
+          "correct": true,
+          "expected": "2026-10-21",
+          "predicted": "2026-10-21"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": 144674.94,
+          "predicted": 144674.94
+        },
+        "incident_description": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "Windstorm tore shingles from the roof and rain leaked into the attic.",
+          "predicted": "Windstorm tore shingles from the roof and rain leaked into the attic."
+        },
+        "incident_location": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "4841 Elm St, Jersey City, NJ",
+          "predicted": "4841 Elm St, Jersey City, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "property",
+          "predicted": "property"
+        },
+        "policy_number": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "POL-100011",
+          "predicted": "POL-100011"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.93,
+          "correct": true,
+          "expected": "2-bedroom apartment",
+          "predicted": "2-bedroom apartment"
+        }
+      },
+      "latency_extract_s": 23.765,
+      "latency_total_s": 30.192,
+      "latency_triage_s": 6.39,
+      "loss_type": "property",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "All required checks passed."
+      ],
+      "route_correct": true,
+      "route_expected": "ready_for_adjuster",
+      "route_predicted": "ready_for_adjuster",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0285",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_76485c93.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "repair_estimate",
+          "filename": "doc_cedac151.pdf",
+          "predicted": "repair_estimate"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_63124072.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": null,
+      "consistency_severity": null,
+      "consistency_skipped": true,
+      "cost_usd": 0.0,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "John Hernandez",
+          "predicted": "John Hernandez"
+        },
+        "date_of_loss": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "2024-04-19",
+          "predicted": "2024-04-19"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": 29971.77,
+          "predicted": 29971.77
+        },
+        "incident_description": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "Front-end collision after sliding on wet pavement into a guardrail.",
+          "predicted": "Front-end collision after sliding on wet pavement into a guardrail."
+        },
+        "incident_location": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "8122 Sunset Blvd, Hoboken, NJ",
+          "predicted": "8122 Sunset Blvd, Hoboken, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "auto",
+          "predicted": "auto"
+        },
+        "policy_number": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "POL-100006",
+          "predicted": "POL-100006"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "2020 Hyundai Elantra",
+          "predicted": "2020 Hyundai Elantra"
+        }
+      },
+      "latency_extract_s": 3.927,
+      "latency_total_s": 4.142,
+      "latency_triage_s": 0.177,
+      "loss_type": "auto",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Policy was not active on the date of loss (2024-04-19).",
+        "Loss type auto is excluded under this policy.",
+        "Consistency check skipped: policy unknown or inactive on the date of loss, so the claim routes on deterministic checks alone."
+      ],
+      "route_correct": true,
+      "route_expected": "likely_not_covered",
+      "route_predicted": "likely_not_covered",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0109",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_e6d78467.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_399bacca.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form and the extracted fields agree on policy number, claimant, date, location, amount ($32,731.90) and vehicle. The photo contradicts the described incident and vehicle. The form describes a front-end collision with a guardrail on wet pavement in Princeton, NJ, involving a 2022 Tesla Model 3. The photo shows a dark pickup truck (Dodge Ram-style grille) partly submerged in floodwater, with storm-wrecked stilt houses and debris on a coastal flooded landscape. No guardrail is visible, and the scene suggests flood or hurricane damage rather than a road collision. This mismatch affects the loss type and the identity of the incident and vehicle, so the claim needs review.",
+      "consistency_severity": "major",
+      "consistency_skipped": false,
+      "cost_usd": 0.006384,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Aisha Rivera",
+          "predicted": "Aisha Rivera"
+        },
+        "date_of_loss": {
+          "confidence": 0.3,
+          "correct": true,
+          "expected": "2027-11-04",
+          "predicted": "2027-11-04"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": 32731.9,
+          "predicted": 32731.9
+        },
+        "incident_description": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "Front-end collision after sliding on wet pavement into a guardrail.",
+          "predicted": "Front-end collision after sliding on wet pavement into a guardrail."
+        },
+        "incident_location": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "4943 Cedar Ln, Princeton, NJ",
+          "predicted": "4943 Cedar Ln, Princeton, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "auto",
+          "predicted": "auto"
+        },
+        "policy_number": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "POL-100010",
+          "predicted": "POL-100010"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "2022 Tesla Model 3",
+          "predicted": "2022 Tesla Model 3"
+        }
+      },
+      "latency_extract_s": 3.325,
+      "latency_total_s": 7.519,
+      "latency_triage_s": 4.146,
+      "loss_type": "auto",
+      "messy": true,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Date of loss has low confidence (0.30) and needs adjuster review.",
+        "Missing required document: repair estimate.",
+        "Consistency check flagged a problem: The claim form and the extracted fields agree on policy number, claimant, date, location, amount ($32,731.90) and vehicle. The photo contradicts the described incident and vehicle. The form describes a front-end collision with a guardrail on wet pavement in Princeton, NJ, involving a 2022 Tesla Model 3. The photo shows a dark pickup truck (Dodge Ram-style grille) partly submerged in floodwater, with storm-wrecked stilt houses and debris on a coastal flooded landscape. No guardrail is visible, and the scene suggests flood or hurricane damage rather than a road collision. This mismatch affects the loss type and the identity of the incident and vehicle, so the claim needs review."
+      ],
+      "route_correct": true,
+      "route_expected": "needs_more_info",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0155",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_d052820c.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "repair_estimate",
+          "filename": "doc_43a33d8d.pdf",
+          "predicted": "repair_estimate"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_29309984.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form and the claimant's description say a front-end collision after sliding on wet pavement into a guardrail. The photo (doc_29309984.jpg) shows a dark car with front-end damage wrapped around a tree on a grass verge. There is no guardrail in the image, and the road in the background looks dry. The photo also shows a car that does not obviously match a 2020 Hyundai Elantra, but that point is less certain. The object struck differs from the description (tree vs guardrail), so the photo contradicts the described incident. The amounts agree: the claim form says $100,081.02 and the repair estimate total is $100,081.02, and the line items sum to that total. The policy number POL-100011 also matches in both documents.",
+      "consistency_severity": "major",
+      "consistency_skipped": false,
+      "cost_usd": 0.009818,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Robert Thomas",
+          "predicted": "Robert Thomas"
+        },
+        "date_of_loss": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "2025-05-14",
+          "predicted": "2025-05-14"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": 100081.02,
+          "predicted": 100081.02
+        },
+        "incident_description": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "Front-end collision after sliding on wet pavement into a guardrail.",
+          "predicted": "Front-end collision after sliding on wet pavement into a guardrail."
+        },
+        "incident_location": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "1858 Elm St, Camden, NJ",
+          "predicted": "1858 Elm St, Camden, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "auto",
+          "predicted": "auto"
+        },
+        "policy_number": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "POL-100011",
+          "predicted": "POL-100011"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "2020 Hyundai Elantra",
+          "predicted": "2020 Hyundai Elantra"
+        }
+      },
+      "latency_extract_s": 3.413,
+      "latency_total_s": 6.494,
+      "latency_triage_s": 3.037,
+      "loss_type": "auto",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Consistency check flagged a problem: The claim form and the claimant's description say a front-end collision after sliding on wet pavement into a guardrail. The photo (doc_29309984.jpg) shows a dark car with front-end damage wrapped around a tree on a grass verge. There is no guardrail in the image, and the road in the background looks dry. The photo also shows a car that does not obviously match a 2020 Hyundai Elantra, but that point is less certain. The object struck differs from the description (tree vs guardrail), so the photo contradicts the described incident. The amounts agree: the claim form says $100,081.02 and the repair estimate total is $100,081.02, and the line items sum to that total. The policy number POL-100011 also matches in both documents."
+      ],
+      "route_correct": false,
+      "route_expected": "ready_for_adjuster",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0207",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_03422b76.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "repair_estimate",
+          "filename": "doc_0b1445ab.pdf",
+          "predicted": "repair_estimate"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_fa703567.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The photo contradicts the described incident. The claim form says 'A fallen tree branch broke two windows and damaged the siding.' The photo (doc_fa703567.jpg) shows a house with its roof structure torn off and collapsed, with exposed rafters and debris across the lawn. The windows on the front facade look intact, and the only tree visible is a small upright sapling. The repair estimate (doc_0b1445ab.pdf) also lists roof repair, drywall replacement and debris removal, with no window or siding line items. The policy number (POL-100003) matches across the form and estimate, and the $62,910.73 total matches the form and the sum of the estimate lines. The mismatch is in the nature and scale of the damage: a minor branch impact versus major structural roof destruction. That affects the identity of the incident and the plausibility of the amount, so the claim needs review.",
+      "consistency_severity": "major",
+      "consistency_skipped": false,
+      "cost_usd": 0.009758,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "David Lee",
+          "predicted": "David Lee"
+        },
+        "date_of_loss": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "2026-05-10",
+          "predicted": "2026-05-10"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": 62910.73,
+          "predicted": 62910.73
+        },
+        "incident_description": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "A fallen tree branch broke two windows and damaged the siding.",
+          "predicted": "A fallen tree branch broke two windows and damaged the siding."
+        },
+        "incident_location": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "2370 Maple Dr, Newark, NJ",
+          "predicted": "2370 Maple Dr, Newark, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "property",
+          "predicted": "property"
+        },
+        "policy_number": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "POL-100003",
+          "predicted": "POL-100003"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "4-bedroom colonial house",
+          "predicted": "4-bedroom colonial house"
+        }
+      },
+      "latency_extract_s": 3.546,
+      "latency_total_s": 6.971,
+      "latency_triage_s": 3.389,
+      "loss_type": "property",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Consistency check flagged a problem: The photo contradicts the described incident. The claim form says 'A fallen tree branch broke two windows and damaged the siding.' The photo (doc_fa703567.jpg) shows a house with its roof structure torn off and collapsed, with exposed rafters and debris across the lawn. The windows on the front facade look intact, and the only tree visible is a small upright sapling. The repair estimate (doc_0b1445ab.pdf) also lists roof repair, drywall replacement and debris removal, with no window or siding line items. The policy number (POL-100003) matches across the form and estimate, and the $62,910.73 total matches the form and the sum of the estimate lines. The mismatch is in the nature and scale of the damage: a minor branch impact versus major structural roof destruction. That affects the identity of the incident and the plausibility of the amount, so the claim needs review."
+      ],
+      "route_correct": false,
+      "route_expected": "ready_for_adjuster",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0120",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_b534af69.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_4a9f7fe1.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form and the extracted data agree on policy number POL-100009, claimant David Hernandez, loss date September 3, 2025, location, and amount $74,792.16. The photo (doc_4a9f7fe1.jpg) contradicts the described incident. The claim form states 'Hailstorm dented the roof and cracked a skylight.' The photo shows a large section of the roof structurally collapsed, with exposed rafters and broken timbers and sheet metal scattered across the lawn. That looks like severe wind or structural damage, not dents and a cracked skylight. The photo also shows a house with an upper-story gable window, while the form describes a 'single-story ranch home.' The nature and scale of the damage differ from the described incident, so the claim should go to review.",
+      "consistency_severity": "major",
+      "consistency_skipped": false,
+      "cost_usd": 0.009566,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "David Hernandez",
+          "predicted": "David Hernandez"
+        },
+        "date_of_loss": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "2025-09-03",
+          "predicted": "2025-09-03"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": 74792.16,
+          "predicted": 74792.16
+        },
+        "incident_description": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "Hailstorm dented the roof and cracked a skylight.",
+          "predicted": "Hailstorm dented the roof and cracked a skylight."
+        },
+        "incident_location": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "3268 Highland Ave, Trenton, NJ",
+          "predicted": "3268 Highland Ave, Trenton, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "property",
+          "predicted": "property"
+        },
+        "policy_number": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "POL-100009",
+          "predicted": "POL-100009"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "single-story ranch home",
+          "predicted": "single-story ranch home"
+        }
+      },
+      "latency_extract_s": 3.598,
+      "latency_total_s": 6.829,
+      "latency_triage_s": 3.2,
+      "loss_type": "property",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Consistency check flagged a problem: The claim form and the extracted data agree on policy number POL-100009, claimant David Hernandez, loss date September 3, 2025, location, and amount $74,792.16. The photo (doc_4a9f7fe1.jpg) contradicts the described incident. The claim form states 'Hailstorm dented the roof and cracked a skylight.' The photo shows a large section of the roof structurally collapsed, with exposed rafters and broken timbers and sheet metal scattered across the lawn. That looks like severe wind or structural damage, not dents and a cracked skylight. The photo also shows a house with an upper-story gable window, while the form describes a 'single-story ranch home.' The nature and scale of the damage differ from the described incident, so the claim should go to review.",
+        "Estimated damage ($74,792.16) exceeds the coverage limit ($60,000.00); payout would be capped at the limit."
+      ],
+      "route_correct": false,
+      "route_expected": "ready_for_adjuster",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0013",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_ef523927.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "police_report",
+          "filename": "doc_af1f184b.pdf",
+          "predicted": "police_report"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_907ea1e1.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form, extracted claim and police report all describe a theft: a vehicle broken into overnight, with electronics and a bag taken. The policy number, date, location and amount match across the form and extraction, and the police report matches on date, location and narrative. The photo (doc_907ea1e1.jpg) shows a silver vehicle with a large crushed dent along the front door and fender, which is collision-type damage. The broken window is covered with plastic and tape. The claimed loss is a break-in theft with no collision, so the photo contradicts the described incident. The photo also shows an older silver station-wagon-style car, which is not clearly a 2020 Hyundai Elantra. The $7,041.88 estimate may include collision damage that the theft description does not account for.",
+      "consistency_severity": "major",
+      "consistency_skipped": false,
+      "cost_usd": 0.006792,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "David Davis",
+          "predicted": "David Davis"
+        },
+        "date_of_loss": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "2025-06-03",
+          "predicted": "2025-06-03"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": 7041.88,
+          "predicted": 7041.88
+        },
+        "incident_description": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Vehicle broken into overnight; electronics and a bag were taken.",
+          "predicted": "Vehicle broken into overnight; electronics and a bag were taken."
+        },
+        "incident_location": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "1892 Oak Ave, Princeton, NJ",
+          "predicted": "1892 Oak Ave, Princeton, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "theft",
+          "predicted": "theft"
+        },
+        "policy_number": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "POL-100009",
+          "predicted": "POL-100009"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "2020 Hyundai Elantra",
+          "predicted": "2020 Hyundai Elantra"
+        }
+      },
+      "latency_extract_s": 7.036,
+      "latency_total_s": 13.07,
+      "latency_triage_s": 6.004,
+      "loss_type": "theft",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Loss type theft is excluded under this policy.",
+        "Consistency check flagged a problem: The claim form, extracted claim and police report all describe a theft: a vehicle broken into overnight, with electronics and a bag taken. The policy number, date, location and amount match across the form and extraction, and the police report matches on date, location and narrative. The photo (doc_907ea1e1.jpg) shows a silver vehicle with a large crushed dent along the front door and fender, which is collision-type damage. The broken window is covered with plastic and tape. The claimed loss is a break-in theft with no collision, so the photo contradicts the described incident. The photo also shows an older silver station-wagon-style car, which is not clearly a 2020 Hyundai Elantra. The $7,041.88 estimate may include collision damage that the theft description does not account for."
+      ],
+      "route_correct": true,
+      "route_expected": "likely_not_covered",
+      "route_predicted": "likely_not_covered",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0080",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_0cf3bb95.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "police_report",
+          "filename": "doc_505f10f6.pdf",
+          "predicted": "police_report"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_feee8a02.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form and police report agree on the policy number (POL-100009), date (08/30/2025), location (9762 Oak Ave, Princeton, NJ) and narrative (tools stolen from a locked garage after the side door was forced), and the loss type is theft. The photo (doc_feee8a02.jpg) conflicts with this. It shows a silver station wagon or hatchback with a crumpled, dented front door and fender, and a broken window covered with plastic sheeting, which looks like collision damage. It shows no garage, forced side door or stolen tools. The claim lists the property as a 2017 Jeep Wrangler, and the pictured vehicle does not look like a Wrangler. The photo contradicts the described incident (theft of tools from a garage) and the listed vehicle. The claimant name is also missing, though the form has no name field.",
+      "consistency_severity": "major",
+      "consistency_skipped": false,
+      "cost_usd": 0.016496,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.05,
+          "correct": true,
+          "expected": null,
+          "predicted": null
+        },
+        "date_of_loss": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "2025-08-30",
+          "predicted": "2025-08-30"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.93,
+          "correct": true,
+          "expected": 42018.25,
+          "predicted": 42018.25
+        },
+        "incident_description": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "Tools stolen from a locked garage after the side door was forced.",
+          "predicted": "Tools stolen from a locked garage after the side door was forced."
+        },
+        "incident_location": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "9762 Oak Ave, Princeton, NJ",
+          "predicted": "9762 Oak Ave, Princeton, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "theft",
+          "predicted": "theft"
+        },
+        "policy_number": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "POL-100009",
+          "predicted": "POL-100009"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.9,
+          "correct": true,
+          "expected": "2017 Jeep Wrangler",
+          "predicted": "2017 Jeep Wrangler"
+        }
+      },
+      "latency_extract_s": 8.957,
+      "latency_total_s": 18.24,
+      "latency_triage_s": 9.215,
+      "loss_type": "theft",
+      "messy": true,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Loss type theft is excluded under this policy.",
+        "Claimant name was not extracted from the documents.",
+        "Consistency check flagged a problem: The claim form and police report agree on the policy number (POL-100009), date (08/30/2025), location (9762 Oak Ave, Princeton, NJ) and narrative (tools stolen from a locked garage after the side door was forced), and the loss type is theft. The photo (doc_feee8a02.jpg) conflicts with this. It shows a silver station wagon or hatchback with a crumpled, dented front door and fender, and a broken window covered with plastic sheeting, which looks like collision damage. It shows no garage, forced side door or stolen tools. The claim lists the property as a 2017 Jeep Wrangler, and the pictured vehicle does not look like a Wrangler. The photo contradicts the described incident (theft of tools from a garage) and the listed vehicle. The claimant name is also missing, though the form has no name field."
+      ],
+      "route_correct": true,
+      "route_expected": "likely_not_covered",
+      "route_predicted": "likely_not_covered",
+      "scan_strength": "heavy",
+      "scanned": true,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0201",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_ac30732f.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "repair_estimate",
+          "filename": "doc_2a267395.pdf",
+          "predicted": "repair_estimate"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_a5fcbd9d.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The policy number POL-100003 matches on the claim form and the repair estimate. The claim form lists an estimated loss of $62,245.55, and the repair estimate total is also $62,245.55. The line items ($18,574.21 + $10,747.51 + $16,009.28 + $16,914.55) add up to that total. The claim form says auto, front-end collision, and the photo shows a severely damaged vehicle with front-end collision damage, so there is no concrete contradiction. The date of loss is missing from the claim, but a missing field is not a contradiction between sources. The tax line is unusually large relative to the other items, but it does not conflict with any other source.",
+      "consistency_severity": null,
+      "consistency_skipped": false,
+      "cost_usd": 0.009448,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Nina Harris",
+          "predicted": "Nina Harris"
+        },
+        "date_of_loss": {
+          "confidence": 0.05,
+          "correct": true,
+          "expected": null,
+          "predicted": null
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": 62245.55,
+          "predicted": 62245.55
+        },
+        "incident_description": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "Front-end collision after sliding on wet pavement into a guardrail.",
+          "predicted": "Front-end collision after sliding on wet pavement into a guardrail."
+        },
+        "incident_location": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "3315 Maple Dr, Camden, NJ",
+          "predicted": "3315 Maple Dr, Camden, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "auto",
+          "predicted": "auto"
+        },
+        "policy_number": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "POL-100003",
+          "predicted": "POL-100003"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "2018 Ford F-150",
+          "predicted": "2018 Ford F-150"
+        }
+      },
+      "latency_extract_s": 3.499,
+      "latency_total_s": 7.369,
+      "latency_triage_s": 3.838,
+      "loss_type": "auto",
+      "messy": true,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Date of loss was not extracted from the documents.",
+        "Date of loss is missing, so policy coverage dates could not be checked."
+      ],
+      "route_correct": true,
+      "route_expected": "needs_more_info",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0277",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_774521c1.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "repair_estimate",
+          "filename": "doc_db4e2db7.pdf",
+          "predicted": "repair_estimate"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_c53a9632.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "No contradiction found. The claim form and repair estimate both show policy POL-100008. The claim form states $14,570.29 and the estimate total is $14,570.29. The line items (2,679.02 + 5,218.27 + 2,904.13 + 3,768.87) sum to that total. The form's loss type, water damage, and its description of a water heater leak match the extracted fields. The photo shows two people with paperwork in a room where the lower drywall has been cut out and the floor is stripped. That is consistent with water damage remediation and does not contradict the described incident.",
+      "consistency_severity": null,
+      "consistency_skipped": false,
+      "cost_usd": 0.007736,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Sofia Jackson",
+          "predicted": "Sofia Jackson"
+        },
+        "date_of_loss": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "2026-08-30",
+          "predicted": "2026-08-30"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": 14570.29,
+          "predicted": 14570.29
+        },
+        "incident_description": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "Water heater failed and leaked across the basement floor.",
+          "predicted": "Water heater failed and leaked across the basement floor."
+        },
+        "incident_location": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "1844 Maple Dr, Jersey City, NJ",
+          "predicted": "1844 Maple Dr, Jersey City, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "water damage",
+          "predicted": "water damage"
+        },
+        "policy_number": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "POL-100008",
+          "predicted": "POL-100008"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "3-bedroom single-family home",
+          "predicted": "3-bedroom single-family home"
+        }
+      },
+      "latency_extract_s": 3.362,
+      "latency_total_s": 7.212,
+      "latency_triage_s": 3.82,
+      "loss_type": "water damage",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "All required checks passed."
+      ],
+      "route_correct": true,
+      "route_expected": "ready_for_adjuster",
+      "route_predicted": "ready_for_adjuster",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0081",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_b85786b7.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "repair_estimate",
+          "filename": "doc_13d475cc.pdf",
+          "predicted": "repair_estimate"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_299ab5ca.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form and the repair estimate agree on the policy number (POL-100009) and the amount: the form states $4,588.92, and the estimate total is $4,588.92. The line items ($869.90 + $1,180.40 + $1,177.69 + $1,360.93) sum to that total. The form's water damage loss type fits the estimate's drywall, flooring and mold remediation items. The photo shows removed carpet and drywall debris outside a house, which fits water damage cleanup and does not concretely contradict the description. No specific contradiction between sources was found.",
+      "consistency_severity": null,
+      "consistency_skipped": false,
+      "cost_usd": 0.011616,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "Sofia Wilson",
+          "predicted": "Sofia Wilson"
+        },
+        "date_of_loss": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "2025-10-16",
+          "predicted": "2025-10-16"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": 4588.92,
+          "predicted": 4588.92
+        },
+        "incident_description": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Burst pipe in the upstairs bathroom flooded two rooms below.",
+          "predicted": "Burst pipe in the upstairs bathroom flooded two rooms below."
+        },
+        "incident_location": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "357 Elm St, Camden, NJ",
+          "predicted": "357 Elm St, Camden, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "water damage",
+          "predicted": "water damage"
+        },
+        "policy_number": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "POL-100009",
+          "predicted": "POL-100009"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.93,
+          "correct": true,
+          "expected": "2-bedroom apartment",
+          "predicted": "2-bedroom apartment"
+        }
+      },
+      "latency_extract_s": 6.936,
+      "latency_total_s": 13.885,
+      "latency_triage_s": 6.912,
+      "loss_type": "water damage",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Loss type water damage is excluded under this policy."
+      ],
+      "route_correct": true,
+      "route_expected": "likely_not_covered",
+      "route_predicted": "likely_not_covered",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0154",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_f0c7af0b.pdf",
+          "predicted": "claim_form"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The extracted fields match the claim form. Policy number POL-100004, claimant Grace Lee, loss date April 5, 2023 (2023-04-05), loss type property, location 6815 Highland Ave, Princeton, NJ, description (fallen tree branch broke two windows and damaged the siding), amount $24,146.37, and property details (3-bedroom single-family home) all agree with the form. The claimant's description is identical to the form's. No contradiction was found between sources.",
+      "consistency_severity": null,
+      "consistency_skipped": false,
+      "cost_usd": 0.004686,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "Grace Lee",
+          "predicted": "Grace Lee"
+        },
+        "date_of_loss": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "2023-04-05",
+          "predicted": "2023-04-05"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": 24146.37,
+          "predicted": 24146.37
+        },
+        "incident_description": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "A fallen tree branch broke two windows and damaged the siding.",
+          "predicted": "A fallen tree branch broke two windows and damaged the siding."
+        },
+        "incident_location": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "6815 Highland Ave, Princeton, NJ",
+          "predicted": "6815 Highland Ave, Princeton, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "property",
+          "predicted": "property"
+        },
+        "policy_number": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "POL-100004",
+          "predicted": "POL-100004"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "3-bedroom single-family home",
+          "predicted": "3-bedroom single-family home"
+        }
+      },
+      "latency_extract_s": 3.284,
+      "latency_total_s": 5.766,
+      "latency_triage_s": 2.461,
+      "loss_type": "property",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Missing required document: damage photos."
+      ],
+      "route_correct": true,
+      "route_expected": "needs_more_info",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0193",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_aabba7f6.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "repair_estimate",
+          "filename": "doc_2b6bf604.pdf",
+          "predicted": "repair_estimate"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_ae9b287b.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form and the extraction both say auto loss on 11/19/2025: a side impact in a parking lot while reversing, at 2535 Oak Ave, Newark, NJ, involving a 2017 Jeep Wrangler. The photo (doc_ae9b287b.jpg) shows something different. It shows vehicles sitting in sand-covered ground among widespread debris, wreckage and damaged houses, which looks like storm surge or flood aftermath. It does not show a parking lot or a collision with side-impact damage, and none of the visible vehicles is identifiable as a Jeep Wrangler. The policy number (POL-100012) and the amount ($10,958.52) agree across the claim form and the repair estimate. The estimate line items also sum to the total. The photo contradicts the described incident, so this needs review.",
+      "consistency_severity": "major",
+      "consistency_skipped": false,
+      "cost_usd": 0.010117999999999999,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Nina Clark",
+          "predicted": "Nina Clark"
+        },
+        "date_of_loss": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "2025-11-19",
+          "predicted": "2025-11-19"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": 10958.52,
+          "predicted": 10958.52
+        },
+        "incident_description": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "Side impact in a parking lot while reversing out of a space.",
+          "predicted": "Side impact in a parking lot while reversing out of a space."
+        },
+        "incident_location": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "2535 Oak Ave, Newark, NJ",
+          "predicted": "2535 Oak Ave, Newark, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "auto",
+          "predicted": "auto"
+        },
+        "policy_number": {
+          "confidence": 0.98,
+          "correct": true,
+          "expected": "POL-100012",
+          "predicted": "POL-100012"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "2017 Jeep Wrangler",
+          "predicted": "2017 Jeep Wrangler"
+        }
+      },
+      "latency_extract_s": 3.697,
+      "latency_total_s": 7.65,
+      "latency_triage_s": 3.924,
+      "loss_type": "auto",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Consistency check flagged a problem: The claim form and the extraction both say auto loss on 11/19/2025: a side impact in a parking lot while reversing, at 2535 Oak Ave, Newark, NJ, involving a 2017 Jeep Wrangler. The photo (doc_ae9b287b.jpg) shows something different. It shows vehicles sitting in sand-covered ground among widespread debris, wreckage and damaged houses, which looks like storm surge or flood aftermath. It does not show a parking lot or a collision with side-impact damage, and none of the visible vehicles is identifiable as a Jeep Wrangler. The policy number (POL-100012) and the amount ($10,958.52) agree across the claim form and the repair estimate. The estimate line items also sum to the total. The photo contradicts the described incident, so this needs review."
+      ],
+      "route_correct": false,
+      "route_expected": "ready_for_adjuster",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0148",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "police_report",
+          "filename": "doc_5c9e563b.pdf",
+          "predicted": "police_report"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": null,
+      "consistency_severity": null,
+      "consistency_skipped": true,
+      "cost_usd": 0.0,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.05,
+          "correct": true,
+          "expected": null,
+          "predicted": null
+        },
+        "date_of_loss": {
+          "confidence": 0.3,
+          "correct": true,
+          "expected": "2027-04-11",
+          "predicted": "2027-04-11"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.05,
+          "correct": true,
+          "expected": null,
+          "predicted": null
+        },
+        "incident_description": {
+          "confidence": 0.95,
+          "correct": false,
+          "expected": null,
+          "predicted": "Vehicle broken into overnight; electronics and a bag were taken."
+        },
+        "incident_location": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "7489 Cedar Ln, Atlantic City, NJ",
+          "predicted": "7489 Cedar Ln, Atlantic City, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.8,
+          "correct": false,
+          "expected": null,
+          "predicted": "theft"
+        },
+        "policy_number": {
+          "confidence": 0.05,
+          "correct": true,
+          "expected": null,
+          "predicted": null
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.1,
+          "correct": true,
+          "expected": null,
+          "predicted": null
+        }
+      },
+      "latency_extract_s": 2.649,
+      "latency_total_s": 2.855,
+      "latency_triage_s": 0.176,
+      "loss_type": "theft",
+      "messy": true,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Policy number was not extracted from the documents.",
+        "Claimant name was not extracted from the documents.",
+        "Date of loss has low confidence (0.30) and needs adjuster review.",
+        "Estimated damage amount was not extracted from the documents.",
+        "Vehicle or property details was not extracted from the documents.",
+        "Policy unknown was not found in the system; verify the policy number.",
+        "Consistency check skipped: policy unknown or inactive on the date of loss, so the claim routes on deterministic checks alone."
+      ],
+      "route_correct": true,
+      "route_expected": "needs_more_info",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    },
+    {
+      "claim_id": "claim-0215",
+      "classifications": [
+        {
+          "correct": true,
+          "expected": "claim_form",
+          "filename": "doc_ddb89535.pdf",
+          "predicted": "claim_form"
+        },
+        {
+          "correct": true,
+          "expected": "damage_photo",
+          "filename": "doc_52493f04.jpg",
+          "predicted": "damage_photo"
+        }
+      ],
+      "conflict_detected": null,
+      "consistency_notes": "The claim form (doc_ddb89535.pdf) and the extracted fields agree with each other: policy POL-100009, insured Aisha Kim, DOL 2025-12-04, property loss, 5258 Cedar Ln, Trenton NJ, $2,702.69. They describe a fallen tree branch that broke two windows and damaged the siding, a limited loss of a house. The photo (doc_52493f04.jpg) shows something different: a collapsed and destroyed structure with debris scattered across the ground, including a sink, appliances, and splintered walls and roofing, apparently a total-loss event such as a tornado or storm. It shows no tree branch and no intact house with broken windows or damaged siding. The described incident (minor tree-branch damage, $2,702.69) conflicts with the photo (a destroyed structure), which affects the identity of the incident and the plausible amount.",
+      "consistency_severity": "major",
+      "consistency_skipped": false,
+      "cost_usd": 0.006926,
+      "error": null,
+      "fields": {
+        "claimant_name": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "Aisha Kim",
+          "predicted": "Aisha Kim"
+        },
+        "date_of_loss": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "2025-12-04",
+          "predicted": "2025-12-04"
+        },
+        "estimated_damage_amount": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": 2702.69,
+          "predicted": 2702.69
+        },
+        "incident_description": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "A fallen tree branch broke two windows and damaged the siding.",
+          "predicted": "A fallen tree branch broke two windows and damaged the siding."
+        },
+        "incident_location": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "5258 Cedar Ln, Trenton, NJ",
+          "predicted": "5258 Cedar Ln, Trenton, NJ"
+        },
+        "loss_type": {
+          "confidence": 0.96,
+          "correct": true,
+          "expected": "property",
+          "predicted": "property"
+        },
+        "policy_number": {
+          "confidence": 0.97,
+          "correct": true,
+          "expected": "POL-100009",
+          "predicted": "POL-100009"
+        },
+        "vehicle_or_property_details": {
+          "confidence": 0.95,
+          "correct": true,
+          "expected": "4-bedroom colonial house",
+          "predicted": "4-bedroom colonial house"
+        }
+      },
+      "latency_extract_s": 3.597,
+      "latency_total_s": 7.035,
+      "latency_triage_s": 3.384,
+      "loss_type": "property",
+      "messy": false,
+      "mismatch_detected": null,
+      "reasons_predicted": [
+        "Consistency check flagged a problem: The claim form (doc_ddb89535.pdf) and the extracted fields agree with each other: policy POL-100009, insured Aisha Kim, DOL 2025-12-04, property loss, 5258 Cedar Ln, Trenton NJ, $2,702.69. They describe a fallen tree branch that broke two windows and damaged the siding, a limited loss of a house. The photo (doc_52493f04.jpg) shows something different: a collapsed and destroyed structure with debris scattered across the ground, including a sink, appliances, and splintered walls and roofing, apparently a total-loss event such as a tornado or storm. It shows no tree branch and no intact house with broken windows or damaged siding. The described incident (minor tree-branch damage, $2,702.69) conflicts with the photo (a destroyed structure), which affects the identity of the incident and the plausible amount."
+      ],
+      "route_correct": false,
+      "route_expected": "ready_for_adjuster",
+      "route_predicted": "needs_more_info",
+      "scan_strength": null,
+      "scanned": false,
+      "status": "ok"
+    }
+  ],
+  "dataset_seed": 42,
+  "model": "claude-sonnet-5-5",
+  "provider": "anthropic",
+  "stopped": null
+}
