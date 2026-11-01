@@ -1,0 +1,39 @@
+# Per-model prices in USD per 1M tokens, from each provider's official
+# pricing page (see sources). These are list prices, not contracted rates,
+# and they change: Gemini's Flash promo rates step up on 2027-01-01, so
+# re-check the sources before any real eval run. Every provider adapter
+# reads this file to report cost per claim; no adapter hardcodes prices.
+#
+# Rule: this file lists only models the project actually configures
+# (the Settings defaults and the .env.example values). When a new model
+# is adopted, add its row here with its source; do not carry a catalog
+# of models nothing selects.
+last_updated: 2026-10-31
+sources:
+  azure_openai: https://developers.openai.com/api/docs/pricing
+  gemini: https://ai.google.dev/gemini-api/docs/pricing
+  anthropic: https://platform.claude.com/docs/en/about-claude/pricing
+  openai: https://developers.openai.com/api/docs/pricing
+providers:
+  azure_openai:
+    # Azure Global Standard matches OpenAI's direct list prices. The key is
+    # the deployment name, which conventionally matches the model name.
+    gpt-6.1-sol:
+      input_per_million: 2.00
+      output_per_million: 10.00
+  openai:
+    # Same model and list price as the Azure entry: the standard OpenAI
+    # API charges the same rate for gpt-6.1-sol.
+    gpt-6.1-sol:
+      input_per_million: 2.00
+      output_per_million: 10.00
+  gemini:
+    # gemini-3-8-flash is the current Flash workhorse. Its rates are
+    # promotional through 2026-12-31 and double on 2027-01-01.
+    gemini-3-8-flash:
+      input_per_million: 0.75
+      output_per_million: 3.75
+  anthropic:
+    claude-sonnet-5-5:
+      input_per_million: 2.00
+      output_per_million: 10.00
