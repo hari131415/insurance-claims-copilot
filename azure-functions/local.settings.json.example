@@ -1,0 +1,1 @@
+{"IsEncrypted":false,"Values":{"AZURE_STORAGE_CONNECTION_STRING":"","AzureWebJobsStorage":"","CORS_ORIGINS":"","DATABASE_URL":"","ENVIRONMENT":"production","FUNCTIONS_WORKER_RUNTIME":"python","LLM_PROVIDER":"mock","STORAGE_BACKEND":"azure_blob"}}

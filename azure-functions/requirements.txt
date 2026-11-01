@@ -1,0 +1,6 @@
+azure-functions
+# The backend package is not on PyPI. Build a wheel from backend/
+# (pip wheel .) and copy it here, then add its filename below so the
+# Functions remote build installs it alongside azure-functions. Its
+# runtime dependencies come from backend/pyproject.toml.
+# ./insurance_claims_copilot-0.1.0-py3-none-any.whl
