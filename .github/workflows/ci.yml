@@ -1,0 +1,114 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install backend
+        run: |
+          python -m venv backend/.venv
+          backend/.venv/bin/pip install -e "backend/.[dev]"
+      - name: Format check
+        working-directory: backend
+        run: .venv/bin/ruff format --check src tests
+      - name: Lint
+        working-directory: backend
+        run: .venv/bin/ruff check src tests
+      - name: Type check
+        working-directory: backend
+        run: .venv/bin/mypy src
+      - name: Test
+        working-directory: backend
+        run: .venv/bin/pytest -q
+      - name: Lint evals
+        run: backend/.venv/bin/ruff check --config backend/pyproject.toml evals
+      - name: Type check evals
+        run: backend/.venv/bin/mypy --config-file backend/pyproject.toml evals
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Install
+        working-directory: frontend
+        run: npm ci
+      - name: Lint
+        working-directory: frontend
+        run: npm run lint
+      - name: Type check
+        working-directory: frontend
+        run: npx tsc --noEmit
+      - name: Build
+        working-directory: frontend
+        run: npm run build
+
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install backend
+        run: |
+          python -m venv backend/.venv
+          backend/.venv/bin/pip install -e "backend/.[dev]"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Install frontend
+        working-directory: frontend
+        run: npm ci
+      - name: Build frontend
+        working-directory: frontend
+        run: npm run build
+      - name: Install Playwright browsers
+        working-directory: frontend
+        run: npx playwright install --with-deps chromium
+      - name: Run end-to-end tests
+        working-directory: frontend
+        run: npm run e2e
+      - name: Run recorded-provider end-to-end tests
+        working-directory: frontend
+        run: npm run e2e:recorded
+
+  storage-live:
+    runs-on: ubuntu-latest
+    services:
+      azurite:
+        image: mcr.microsoft.com/azure-storage/azurite
+        ports:
+          - 10000:10000
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install backend
+        run: |
+          python -m venv backend/.venv
+          backend/.venv/bin/pip install -e "backend/.[dev]"
+      - name: Blob round-trip against Azurite
+        working-directory: backend
+        # Azurite's public default dev account and key (local emulator
+        # only, not a real credential), with the localhost endpoint the
+        # service container is mapped to.
+        env:
+          AZURE_BLOB_TEST_CONNECTION_STRING: "DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://localhost:10000/devstoreaccount1;"
+        run: .venv/bin/pytest -q tests/test_azure_blob_live.py
