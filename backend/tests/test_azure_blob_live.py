@@ -2,6 +2,7 @@ import os
 import uuid
 
 import pytest
+from azure.core.exceptions import ResourceExistsError
 
 from claims_copilot.services.storage import AzureBlobStorage
 
@@ -16,6 +17,11 @@ pytestmark = pytest.mark.skipif(
 def test_azure_blob_round_trip() -> None:
     assert CONNECTION_STRING is not None
     storage = AzureBlobStorage(CONNECTION_STRING, "test-claims")
-    storage.container_client.create_container(exist_ok=True)
+    # create_container has no exist_ok flag; unknown kwargs are passed
+    # down to the HTTP transport and fail there, so catch the conflict.
+    try:
+        storage.container_client.create_container()
+    except ResourceExistsError:
+        pass
     key = storage.save(uuid.uuid4(), "report.pdf", b"%PDF-1.4 test")
     assert storage.read(key) == b"%PDF-1.4 test"
